@@ -43,7 +43,7 @@
     <file path="/Hello.scala" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1373436794188" ignored="false" />
     <file path="$PROJECT_DIR$/../../sbttest/.idea/misc.xml" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1373436915924" ignored="false" />
     <file path="$PROJECT_DIR$/../../sbttest/src/main/scala/Hello.scala" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1373437953932" ignored="false" />
-    <file path="/SBT" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1373522013389" ignored="false" />
+    <file path="/SBT" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1373522370657" ignored="false" />
     <file path="/a.xml" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1373508172631" ignored="false" />
     <file path="/Dummy.txt" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1373510580675" ignored="false" />
     <file path="/PTMenu.scala" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1373514610378" ignored="false" />
@@ -184,7 +184,7 @@
       <file leaf-file-name="Build.scala" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/project/Build.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="73" selection-start="414" selection-end="414" vertical-scroll-proportion="0.2932961">
+            <state line="13" column="73" selection-start="371" selection-end="414" vertical-scroll-proportion="0.2932961">
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -242,8 +242,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="584" />
-    <option name="y" value="22" />
+    <option name="x" value="58" />
+    <option name="y" value="37" />
     <option name="width" value="1320" />
     <option name="height" value="728" />
   </component>
@@ -616,8 +616,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="584" y="22" width="1320" height="728" extended-state="0" />
-    <editor active="false" />
+    <frame x="58" y="37" width="1320" height="728" extended-state="1" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5344262" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5344262" order="2" side_tool="false" content_ui="tabs" />
@@ -627,7 +627,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="SBT Console" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3295082" sideWeight="0.49921507" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3295082" sideWeight="0.49921507" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.652459" sideWeight="0.50039095" order="7" side_tool="true" content_ui="tabs" />
@@ -827,7 +827,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/project/Build.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="73" selection-start="414" selection-end="414" vertical-scroll-proportion="0.2932961">
+        <state line="13" column="73" selection-start="371" selection-end="414" vertical-scroll-proportion="0.2932961">
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>

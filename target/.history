@@ -16,7 +16,3 @@ android:package-debug
 android:aapt-package
 last PactDD/android:aapt-package
 android:aapt-package
-android:github-repo
-android:github-upload
-android:github-delete
-exit
