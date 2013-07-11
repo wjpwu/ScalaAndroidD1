@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@+id/gTopFrame" style="@style/TopFrameStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="center" android:id="@+id/gTopBg" android:layout_width="fill_parent" android:layout_height="wrap_content"
+            >
+        <ImageView android:id="@+id/topBg" android:layout_marginTop="0dip" style="@style/TopBgStyle"
+                   android:adjustViewBounds="true"/>
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="center" android:id="@+id/gTopLogo" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@+id/toplogo" android:layout_width="fill_parent" android:layout_height="40dp" android:layout_marginLeft="30.0dip" android:layout_marginTop="0.0dip" android:layout_marginRight="30.0dip" android:src="@drawable/plogo"
+                   android:adjustViewBounds="true" android:focusable="false" android:scaleType="center"/>
+    </LinearLayout>
+</FrameLayout>

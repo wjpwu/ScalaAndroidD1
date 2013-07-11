@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@+id/llinelayout" android:background="@drawable/list_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@+id/gTopFrame" style="@style/TopFrameStyle">
+        <ImageView android:id="@+id/toplogo" style="@style/TopBgStyle" android:adjustViewBounds="true"/>
+        <RelativeLayout android:layout_gravity="center" android:id="@+id/gTopliner" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:id="@+id/gBtnGoBack" style="@style/ButtonGoBackStyle" />
+            <TextView android:id="@+id/gTvMenuTitle" style="@style/TvMenuTitleStyle" />
+            <Button android:id="@+id/gBtnGoRelogin" style="@style/ButtonReloginStyle" />
+        </RelativeLayout>
+    </FrameLayout>
+    <ListView android:id="@+id/llistview" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:divider="@drawable/list_separator" android:dividerHeight="1.0px" />
+    <View android:background="@drawable/list_separator" android:layout_width="fill_parent" android:layout_height="1.0px" />
+</LinearLayout>

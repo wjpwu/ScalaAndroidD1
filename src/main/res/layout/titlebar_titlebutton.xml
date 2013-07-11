@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@+id/gTopFrame" style="@style/TopFrameStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@+id/toplogo" style="@style/TopBgStyle" android:adjustViewBounds="true"/>
+    <RelativeLayout android:layout_gravity="center" android:id="@+id/gTopliner" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:id="@+id/gBtnGoBack" style="@style/ButtonGoBackStyle" />
+        <TextView android:id="@+id/gTvMenuTitle" style="@style/TvMenuTitleStyle" />
+        <Button android:id="@+id/gBtnGoRelogin" style="@style/ButtonReloginStyle" />
+    </RelativeLayout>
+</FrameLayout>

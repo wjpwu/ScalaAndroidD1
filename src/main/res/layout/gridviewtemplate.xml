@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@+id/view_titlebar_logo" layout="@layout/titlebar_logo" />
+    <include android:id="@+id/view_titlebar_func" android:visibility="gone" layout="@layout/titlebar_titlebutton" />
+    <GridView android:id="@+id/gGridView" style="@style/GridViewStyle" />
+</LinearLayout>

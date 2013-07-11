@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/defaultTextStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android" android:background="@drawable/dialog_bg">
+    <ImageView android:layout_gravity="center_horizontal" android:id="@+id/aboutIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_launcher" />
+    <TextView android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="招商银行手机银行" />
+    <TextView android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="m.cmbchina.com" />
+    <TextView android:layout_gravity="center_horizontal" android:id="@+id/version" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" />
+    <TextView android:layout_gravity="center_horizontal" android:id="@+id/btn95555" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="招行服务热线：95555" />
+    <TextView android:layout_gravity="center_horizontal" android:id="@+id/btnXyk" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="信用卡服务热线：400-820-5555" />
+    <TextView android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="招商银行版权所有" />
+    <TextView android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Copyright 2013 All Rights Reserved" />
+    <LinearLayout android:orientation="vertical" android:id="@+id/buttonPanel" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="44.0dip">
+        <LinearLayout android:orientation="horizontal" android:paddingLeft="2.0dip" android:paddingTop="4.0dip" android:paddingRight="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:textSize="16.0sp" android:text = "确 认" android:textColor="#ffffffff" android:layout_gravity="center_horizontal" android:id="@+id/buttonOK" android:background="@drawable/btn_dialog_selection" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="2" android:layout_weight="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

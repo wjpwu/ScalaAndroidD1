@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/lItemRelativeLayout" android:background="@drawable/list_bg_selection" android:paddingTop="2.0dip" android:paddingBottom="2.0dip" android:layout_width="fill_parent" android:layout_height="50.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@+id/lItemFrontImage" android:layout_width="wrap_content" android:layout_height="40.0dip" android:layout_marginLeft="5.0dip" android:src="@drawable/prefix" android:layout_alignParentLeft="true" android:layout_centerVertical="true"
+               android:adjustViewBounds="false"/>
+    <ImageView android:layout_gravity="right" android:id="@+id/lItemEndImage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:src="@drawable/suffix" android:layout_alignParentRight="true" android:layout_centerVertical="true"
+               android:adjustViewBounds="false"/>
+    <TextView android:textSize="18.0sp" android:textColor="#ff05448b" android:gravity="center_vertical" android:id="@+id/lItemTitle" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:shadowColor="#00000000" android:shadowDx="2.0" android:shadowDy="2.0" android:shadowRadius="1.0" android:layout_toLeftOf="@+id/lItemEndImage" android:layout_toRightOf="@+id/lItemFrontImage" />
+</RelativeLayout>

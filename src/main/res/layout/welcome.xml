@@ -1,0 +1,11 @@
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@+id/view_titlebar_logo" layout="@layout/titlebar_logo" />
+    <include android:id="@+id/view_titlebar_func" android:visibility="gone" layout="@layout/titlebar_titlebutton" />
+    <GridView android:id="@+id/gGridView" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/GridViewStyle" />
+    <LinearLayout android:orientation="vertical" android:id="@+id/welcomeLayout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <WebView android:gravity="center" android:layout_gravity="center" android:id="@+id/welcomeWebview" android:layout_width="289.0dip" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_centerInParent="true" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

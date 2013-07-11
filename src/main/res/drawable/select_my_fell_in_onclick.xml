@@ -1,0 +1,11 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/imsp_img_077" android:state_enabled="false"/>
+    <!-- 点击状态 -->
+    <item android:drawable="@drawable/imsp_img_077_ov" android:state_pressed="true"/>
+    <!-- 可用状态 和 获取到焦点状态 -->
+    <item android:drawable="@drawable/imsp_img_077_ov" android:state_enabled="true" android:state_focused="true"/>
+    <!-- button为可用状态 -->
+    <item android:drawable="@drawable/imsp_img_077" android:state_enabled="true"/>
+
+</selector>

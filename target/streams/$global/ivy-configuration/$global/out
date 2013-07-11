@@ -1,0 +1,8 @@
+[debug] Other repositories:
+[debug] Default repositories:
+[debug] 	Raw(ProjectResolver(inter-project, mapped: ))
+[debug] 	FileRepository(local,FileConfiguration(true,None),sbt.Patterns@246cce74)
+[debug] 	public: http://repo1.maven.org/maven2/
+[debug] Using inline dependencies specified in Scala.
+[info] Resolving org.scala-lang#scala-library;2.9.2 ...
+[info] Resolving org.scalatest#scalatest_2.9.2;1.8 ...

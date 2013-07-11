@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+    <WebView android:id="@+id/wWebview" android:paddingTop="0.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="-2.0dip" />
+    <LinearLayout android:orientation="vertical" android:id="@+id/welcomeLayout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include layout="@layout/titlebar_logo" />
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <WebView android:gravity="center" android:layout_gravity="center" android:id="@+id/welcomeWebview" android:layout_width="289.0dip" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="60.0dip" android:layout_centerInParent="true" />
+            <Button android:textSize="18.0sp" android:textColor="@drawable/textcolor_selection" android:layout_gravity="center" android:id="@+id/back2FuncBtn" android:background="@drawable/mbutton_selection" android:padding="0.0dip" android:layout_width="fill_parent" android:layout_height="35.0dip" android:layout_marginLeft="10.0dip" android:layout_marginTop="-50.0dip" android:layout_marginRight="10.0dip" android:text="主菜单" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/webLoadingLayout" android:background="@drawable/webbg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="-2.0dip" android:layout_weight="1.0">
+        <ProgressBar android:layout_gravity="center" android:id="@+id/loadingProcessBar" android:layout_width="36.0dip" android:layout_height="36.0dip" android:layout_marginTop="140.0dip" style="@style/animStyle" />
+        <TextView android:textColor="#ff494c49" android:gravity="center" android:layout_gravity="center" android:id="@+id/message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="正在加载..." style="?android:attr/textAppearanceMedium" />
+    </LinearLayout>
+</LinearLayout>
