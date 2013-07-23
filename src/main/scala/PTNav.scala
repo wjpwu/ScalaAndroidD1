@@ -9,15 +9,19 @@ import android.content.res.{Configuration, Resources}
 import android.os.{Message, Handler, Bundle}
 import android.content.{IntentFilter, Intent}
 import android.view._
-import org.dom4j.Element
+import scala.xml.Node
+
 import java.util.Observable
 import android.util.Log
 import android.graphics.BitmapFactory
 import android.view.View.OnClickListener
 import java.io.{InputStreamReader, BufferedReader}
 import com.laomo.zxing.CaptureActivity
-import org.dom4j.io.SAXReader
 import android.webkit.WebView
+import com.markupartist.android.widget.ActionBar
+import ActionBar.AbstractAction
+import com.markupartist.android.widget.ActionBar
+import scala.ref.WeakReference
 
 /**
  * Created with IntelliJ IDEA.
@@ -49,12 +53,13 @@ trait FindView extends Activity {
 //  }
 }
 
-
 object App{
-  var shareContext: PTApp =_
-  var shareTab: PTTab = _
-  var document: Element =_
-  var tabs: java.util.Map[String,Element] =_
+  var ptApp: PTApp =_
+  var ptLoading: PTLoading = _
+  var ptTab: PTTab = _
+//  var document: Element =_
+  var ptTabsCache: java.util.Map[String,Node] =_
+  var ptDocument: scala.xml.Node = _
 
 }
 
@@ -64,8 +69,8 @@ class PTApp extends android.app.Application{
 
   override def onCreate() {
     super.onCreate()
-    App.shareContext = this;
-    App.tabs = new java.util.HashMap[String,Element];
+    App.ptApp = this;
+    App.ptTabsCache = new java.util.HashMap[String,Node];
     session = new java.util.HashMap[String, String]
 //    menuInit()
     LogUtil.log(this.getClass.getName + "on onCreate")
@@ -76,7 +81,7 @@ class PTApp extends android.app.Application{
   override def onLowMemory() {
     super.onLowMemory()
     LogUtil.log(this.getClass.getName + "on onLowMemory")
-    LogUtil.logObj(this.getClass.getName + "on onLowMemory")(Array{App.document ; App.shareTab ; App.shareContext})
+    LogUtil.logObj(this.getClass.getName + "on onLowMemory")(Array{App.ptDocument ; App.ptTab ; App.ptApp})
   }
 
   override def onConfigurationChanged(newConfig: Configuration) {
@@ -86,15 +91,21 @@ class PTApp extends android.app.Application{
   override def onTerminate() {
     super.onTerminate()
     LogUtil.log("PTApp on onTerminate")
-    LogUtil.logObj("PTApp on onLowMemory")(Array{App.document ; App.shareTab ; App.shareContext})
+    LogUtil.logObj("PTApp on onLowMemory")(Array{App.ptDocument ; App.ptTab ; App.ptApp})
   }
 
-  def menuInit(){
-    val input = Util.getFromInternal(App.shareContext, "CommonMenu.xml");
+  def menuInit() = {
+    val input = new java.io.File(this.getFilesDir.getPath+"/CommonMenu.xml")
     if(input != null){
-      val saxReader = new SAXReader();
-      App.document = saxReader.read(input).getRootElement;
+//      val saxReader = new SAXReader();
+//      App.document = saxReader.read(input).getRootElement;
+//      App.ptDocument = scala.xml.XML.load(input)
+//      val f = new java.io.File(this.getFilesDir.getPath+"/CommonMenu.xml")
+      App.ptDocument = scala.xml.XML.loadFile(input)
+//      LogUtil.log(PTMenu.filterItem(App.ptDocument,"1.2.2").toString())
+      true
     }
+    else false
   }
 
   def sessionClean {
@@ -126,6 +137,15 @@ class PTActivity extends ActivityGroup{
     super.onStart()
     LogUtil.log(this.getClass.getName + "on onStart")
   }
+
+//  def isOpenNetwork() = {
+//    var starus = false
+//    val connManager = getSystemService(Context.CONNECTIVITY_SERVICE).asInstanceOf[ConnectivityManager]
+//    if (connManager.getActiveNetworkInfo() != null) {
+//      starus = connManager.getActiveNetworkInfo().isAvailable()
+//    }
+//    starus
+//  }
 
   override def onCreate(savedInstanceState: Bundle) {
     super.onCreate(savedInstanceState)
@@ -182,44 +202,37 @@ class PTLoading extends PTActivity{
       localMenuMD5 = null
   }
 
-  def tabInit{
-    PTMenu.menuWithId("1")
-    PTMenu.menuWithId("2")
-    PTMenu.menuWithId("4")
-    PTMenu.menuWithId("9")
-  }
 
   def home{
     val i = new Intent(this,classOf[PTTab])
     startActivity(i)
-//    finish()
   }
 
   override def onResume() {
     super.onResume()
-//    handler.post(new MyThread)
-//    if(URLUtil.isNetworkUrl())
     handler.postDelayed(new MyThread,1*1000)
-    //    getLocalMenuMD5
-//    getMenuMD5
-//    home
   }
 
   override def onCreate(savedInstanceState: Bundle) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.splash)
-    handler = new LoadHandler
+    handler = new LoadHandler(new WeakReference(PTLoading.this))
+    App.ptLoading = this
   }
 
-  class LoadHandler extends Handler{
+  class LoadHandler(private val activity:WeakReference[Activity]) extends Handler{
     override def handleMessage(msg: Message) {
-      if(msg.what == 1)
-        home
-      else
-        PTMenu.alertDialog(PTLoading.this)("获取菜单信息失败，是否重试？"){
-//          handler.post(new MyThread)
-          handler.postDelayed(new MyThread,1*1000)
-        }.show()
+      msg.what match{
+        case 1 => home
+        case 2 => PTMenu.ptAlertDialog(activity.get.get)("获取菜单信息失败，是否重试？"){
+          handler.postDelayed(new MyThread,1*1000)}{}.show()
+        case _ => if(msg.obj == null)
+            PTMenu.ptAlertDialog(activity.get.get)("未知错误，是否重试？"){
+          handler.postDelayed(new MyThread,1*1000)}{}.show()
+                  else
+          PTMenu.ptAlertDialog(activity.get.get)((msg.obj).asInstanceOf[String]){
+            handler.postDelayed(new MyThread,1*1000)}{}.show()
+      }
       super.handleMessage(msg)
     }
   }
@@ -231,28 +244,33 @@ class PTLoading extends PTActivity{
       message.what = 0
       getLocalMenuMD5
 
-      PTGet.ptGet(URLS.ptMMD5){
-        s: String =>
+      PTGet.ptFutureGet(
+            url =  URLS.ptMMD5,
+           fail = (s:String) => {message.obj = s;handler.sendMessage(message)},
+        success = (s:String) => {
           menuMD5 = s
-          Log.d("ptGet","ptMMD5" + s)
+          LogUtil.log("ptMMD5" + s)
           if(s == null){
-            message.what = 0
+            handler.sendMessage(message)
           }
           else if(!s.equals(localMenuMD5)){
-//            PTMenu.ToCast(PTLoading.this) ("Menu changed.Success get Menu MD5 value from host" + s)
-            // get menu
-            PTGet.ptGet(URLS.ptMenu){
-              menu: String =>
-                Util.saveToInternal(PTLoading.this,"CommonMenu.xml",menu.getBytes)
+            PTGet.ptFutureGet(
+               url =  URLS.ptMenu,
+              fail = (s:String) => {message.obj = s;handler.sendMessage(message)},
+           success = (m:String) => {
+                Util.saveToInternal(PTLoading.this,"CommonMenu.xml",m.getBytes)
                 if(menuMD5 != null)
                   Util.saveToInternal(PTLoading.this,"CommonMenuMD5",menuMD5.getBytes)
                 message.what = 1
-            }
+                handler.sendMessage(message)
+              }
+            )
           } else{
             message.what = 1
+            handler.sendMessage(message)
           }
-          handler.sendMessage(message)
-      }
+        }
+      )
     }
   }
 
@@ -269,9 +287,9 @@ class PTTab extends TabActivity{
   override def onCreate(savedInstanceState: Bundle) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.main)
-    App.shareContext.menuInit()
+    App.ptApp.menuInit()
     res     = getResources()
-    App.shareTab = this
+    App.ptTab = this
     tabHost = getTabHost()
     tabHost.addTab(loginTab)
     tabHost.addTab(newSpecWithId("1"))
@@ -284,7 +302,7 @@ class PTTab extends TabActivity{
 
   def newSpecWithId(id: String) = {
     val intent = new Intent().setClass(this, classOf[PTUI])
-    val menu1 = PTMenu.menuWithId(id)
+    val menu1 = PTMenu.findItemWithId(id)
     val name1 = PTMenu.noteValue(menu1,"Name")
     val text1 = PTMenu.noteValue(menu1,"text")
     val img = PTMenu.noteValue(menu1,"img")
@@ -298,7 +316,7 @@ class PTTab extends TabActivity{
 
   def loginTab = {
     val intent = new Intent().setClass(this, classOf[PTLogin])
-    val menu1 = PTMenu.menuWithId("4")
+    val menu1 = PTMenu.findItemWithId("4")
     val name1 = PTMenu.noteValue(menu1,"Name")
     val text1 = PTMenu.noteValue(menu1,"text")
     val img = PTMenu.noteValue(menu1,"img")
@@ -330,6 +348,9 @@ class PTTab extends TabActivity{
   def exit{
     PTMenu.alertDialog(this)("您确定要退出吗？"){
       finish()
+      ImageLoaderFactory.getImageLoader(this).clearCache()
+      if(App.ptLoading != null)
+        App.ptLoading.finish()
     }.show()
   }
 
@@ -344,20 +365,10 @@ class PTTab extends TabActivity{
     }
     true
   }
-
-  def reset{
-//    tabHost.clearAllTabs()
-//    tabHost.addTab(loginTab)
-//    tabHost.addTab(newSpecWithId("1"))
-//    tabHost.addTab(newSpecWithId("2"))
-//    tabHost.addTab(newSpecWithId("9"))
-    //    tabHost.addTab(tabWithId("4"))
-    tabHost.setCurrentTab(0)
-  }
 }
 
 
-class PTUI extends PTActivity with FindView with java.util.Observer{
+class PTUI extends PTActivity with FindView with TypedActivity with java.util.Observer{
 
 //  var current: Element = _
 //  var currentView: View = _
@@ -365,7 +376,7 @@ class PTUI extends PTActivity with FindView with java.util.Observer{
   var receiver: MyReceiver =_
   var superMenuId: String=_
   var loginReceiver: MyReceiver =_
-  var navigations: java.util.List[Element]=_
+  var navigations: java.util.List[Node]=_
 
   def update(p1: Observable, p2: Any) {
 
@@ -374,11 +385,12 @@ class PTUI extends PTActivity with FindView with java.util.Observer{
   override def onCreate(savedInstanceState: Bundle) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.ptmain)
-    navigations = new java.util.ArrayList[Element]()
+    navigations = new java.util.ArrayList[Node]()
     val superId = getIntent.getStringExtra("superId")
     superMenuId = superId
-    val e = PTMenu.menuWithId(superId).asInstanceOf[Element]
-    flipper = findViewById(R.id.flipper).asInstanceOf[ViewFlipper]
+    val e = PTMenu.findItemWithId(superId)
+    flipper = findView(TR.flipper)
+//      findViewById(R.id.flipper).asInstanceOf[ViewFlipper]
     navigate(e)
     receiver = new MyReceiver(sessionHandler)
     registerReceiver(receiver, new IntentFilter("cc.ptlogout"))
@@ -418,7 +430,65 @@ class PTUI extends PTActivity with FindView with java.util.Observer{
         navTopBar(navigations.get(navigations.size() - 1))(flipper.getCurrentView)
   }
 
-  def navTopBar(e1: Element)(v: View){
+
+  //using actionbar TODO
+  def navTopBar1(e1: Node)(v: View){
+    if(e1 != null && v != null){
+      val superId = PTMenu.noteValue(e1,"id")
+      val toplogo = v.findViewById(R.id.view_titlebar_logo)
+      val actionTop = v.findViewById(R.id.view_titleaction_func)
+      val actionBar = v.findViewById(R.id.actionbar).asInstanceOf[ActionBar]
+
+      // is sub zxing.view?
+      if(toplogo != null && actionBar!= null){
+       if(superId.length == 1){
+          actionTop.setVisibility(View.GONE)
+          toplogo.setVisibility(View.VISIBLE)
+        }
+        else {
+          actionTop.setVisibility(View.VISIBLE)
+          toplogo.setVisibility(View.GONE)
+        }
+      }
+
+      if(superId.length > 1 && actionBar != null){
+        actionBar.setHomeAction(new MyBarAction(R.drawable.icon_myfavorite_pressed,{
+          action:View =>
+            actionBar.setProgressBarVisibility(View.VISIBLE);
+            showPrex()
+        }))
+      }
+      val btnBack = button(R.id.gBtnGoBack,v)
+      val btnRelogin = button(R.id.gBtnGoRelogin,v)
+      //TODO
+      if(btnBack != null && superId.length == 1 ){
+        btnBack.setVisibility(View.GONE)
+      }
+      if (btnBack != null)
+        btnBack.setOnClickListener(PTMenu.onClickListener({showPrex()}))
+      if (btnRelogin != null){
+        if(!App.ptApp.isSessionValidid)
+          btnRelogin.setText("登录")
+        else
+          btnRelogin.setText("退出")
+
+        btnRelogin.setOnClickListener(PTMenu.onClickListener({
+          if(App.ptApp.isSessionValidid){
+            logout
+          } else{
+            App.ptTab.tabHost.setCurrentTab(0)
+          }
+        }))
+      }
+
+      val title = textView(R.id.gTvMenuTitle,v)
+      if(title != null){
+        title.setText(PTMenu.noteValue(e1,"text"))
+      }
+    }
+  }
+
+  def navTopBar(e1: Node)(v: View){
     if(e1 != null && v != null){
       val superId = PTMenu.noteValue(e1,"id")
       val toplogo = v.findViewById(R.id.view_titlebar_logo)
@@ -426,7 +496,7 @@ class PTUI extends PTActivity with FindView with java.util.Observer{
 
       // is sub zxing.view?
       if(toplogo != null && topnav!= null){
-        if(App.shareContext.isSessionValidid){
+        if(App.ptApp.isSessionValidid){
           topnav.setVisibility(View.VISIBLE)
           toplogo.setVisibility(View.GONE)
         }
@@ -449,16 +519,16 @@ class PTUI extends PTActivity with FindView with java.util.Observer{
       if (btnBack != null)
         btnBack.setOnClickListener(PTMenu.onClickListener({showPrex()}))
       if (btnRelogin != null){
-        if(!App.shareContext.isSessionValidid)
+        if(!App.ptApp.isSessionValidid)
           btnRelogin.setText("登录")
         else
           btnRelogin.setText("退出")
 
         btnRelogin.setOnClickListener(PTMenu.onClickListener({
-          if(App.shareContext.isSessionValidid){
+          if(App.ptApp.isSessionValidid){
             logout
           } else{
-            App.shareTab.tabHost.setCurrentTab(0)
+            App.ptTab.tabHost.setCurrentTab(0)
           }
         }))
       }
@@ -471,10 +541,9 @@ class PTUI extends PTActivity with FindView with java.util.Observer{
   }
 
   def logout{
-    PTMenu.alertDialog(App.shareTab)("您确定需要重新登录吗?"){
-      sendBroadcast(new Intent("cc.ptlogout"))
-      App.shareContext.sessionClean
-      App.shareTab.reset
+    PTMenu.alertDialog(App.ptTab)("您确定需要重新登录吗?"){
+      App.ptApp.sessionClean
+      App.ptTab.finish()
     }.show()
   }
 
@@ -487,7 +556,7 @@ class PTUI extends PTActivity with FindView with java.util.Observer{
     false
   }
 
-  def navigate(e: Element)
+  def navigate(e: Node)
   {
     val t1 = System.currentTimeMillis()
     val t =  PTMenu.noteValue(e,"type")
@@ -515,29 +584,29 @@ class PTUI extends PTActivity with FindView with java.util.Observer{
         flipper.addView(toView)
       case "func" =>
         toView = PTMenu.webView(this)(e){
-          ee: Element =>
+          ee: Node =>
             showPrex()
         }
         flipper.addView(toView)
       case "funcc" =>
         toView = PTMenu.webView(this)(e){
-          ee: Element =>
+          ee: Node =>
             showPrex()
         }
         flipper.addView(toView)
       case "web" =>
         // need login
-        if(!App.shareContext.isSessionValidid()){
+        if(!App.ptApp.isSessionValidid()){
             PTMenu.alertDialog(PTUI.this)("该功能要求使用登陆，您当前还没有登陆，您需要登陆吗？"){
-              val currentTab = App.shareTab.tabHost.getCurrentTab
+              val currentTab = App.ptTab.tabHost.getCurrentTab
               val toE = e
-              App.shareTab.tabHost.setCurrentTab(0)
+              App.ptTab.tabHost.setCurrentTab(0)
               loginReceiver = new MyReceiver({
                 action:Intent =>
                   unregisterReceiver(loginReceiver)
-                  App.shareTab.tabHost.setCurrentTab(currentTab)
+                  App.ptTab.tabHost.setCurrentTab(currentTab)
                   toView = PTMenu.webView(this)(toE){
-                    ee: Element=>
+                    ee: Node=>
                       showPrex()
                   }
                   flipper.addView(toView)
@@ -548,7 +617,7 @@ class PTUI extends PTActivity with FindView with java.util.Observer{
             }.show()
         } else{
           toView = PTMenu.webView(this)(e){
-            ee: Element=>
+            ee: Node=>
               showPrex()
           }
           flipper.addView(toView)
@@ -602,11 +671,11 @@ class PTUI extends PTActivity with FindView with java.util.Observer{
     initTopBar
   }
 
-  def welcomeView(e: Element) = {
+  def welcomeView(e: Node) = {
     val view = getLayoutInflater.inflate(R.layout.welcome,null)
     val gridView = view.findViewById(R.id.gGridView).asInstanceOf[GridView]
-    gridView.setAdapter(new GridViewAdapter(e.elements()))
-    gridView.setOnItemClickListener(new MenuItemListener(e.elements()))
+    gridView.setAdapter(new GridViewAdapter(PTMenu.nodeChild(e)))
+    gridView.setOnItemClickListener(new MenuItemListener(PTMenu.nodeChild(e)))
 
     val webView = view.findViewById(R.id.welcomeWebview).asInstanceOf[WebView]
     PTMenu.webViewFormat(webView)(HttpUtil.BASE_URL+"mwelcome"){
@@ -615,23 +684,28 @@ class PTUI extends PTActivity with FindView with java.util.Observer{
     view
   }
 
-  def gridView(e: Element) = {
+  def gridView(e: Node) = {
     val view = getLayoutInflater.inflate(R.layout.gridviewtemplate,null)
     val gridView = view.findViewById(R.id.gGridView).asInstanceOf[GridView]
-    gridView.setAdapter(new GridViewAdapter(e.elements()))
-    gridView.setOnItemClickListener(new MenuItemListener(e.elements()))
+    gridView.setAdapter(new GridViewAdapter(PTMenu.nodeChild(e)))
+    gridView.setOnItemClickListener(new MenuItemListener(PTMenu.nodeChild(e)))
     view
   }
 
-  def listView(e: Element) = {
+  def listView(e: Node) = {
     val view = getLayoutInflater.inflate(R.layout.listviewtemplate,null)
     val lv = view.findViewById(R.id.llistview).asInstanceOf[ListView]
-    lv.setAdapter(new ListViewAdapter(e.elements()))
-    lv.setOnItemClickListener(new MenuItemListener(e.elements()))
+    lv.setAdapter(new ListViewAdapter(PTMenu.nodeChild(e)))
+    lv.setOnItemClickListener(new MenuItemListener(PTMenu.nodeChild(e)))
     view
   }
 
-  class GridViewAdapter(list: java.util.List[Element]) extends BaseAdapter{
+  class MyBarAction(icon: Int , action: View => Any) extends AbstractAction(icon) {
+
+    def performAction(p1: View) {action(p1)}
+  }
+
+  class GridViewAdapter(list: List[Node]) extends BaseAdapter{
     def getView(p1: Int, p2: View, p3: ViewGroup): View = {
       val t1 = System.currentTimeMillis()
 
@@ -639,7 +713,7 @@ class PTUI extends PTActivity with FindView with java.util.Observer{
         val view = LayoutInflater.from(PTUI.this).inflate(R.layout.gridview_itemtemplate,null)
         val imgV = view.findViewById(R.id.gridview_item_funcIcon).asInstanceOf[ImageView]
         val tv:TextView = view.findViewById(R.id.gridview_item_funcName).asInstanceOf[TextView]
-        val e = list.get(p1)
+        val e = list.apply(p1)
         val img = PTMenu.noteValue(e,"img")
 
         imgV.setScaleType(ImageView.ScaleType.FIT_CENTER);
@@ -649,8 +723,9 @@ class PTUI extends PTActivity with FindView with java.util.Observer{
         tv.setTextSize(12.0f)
         tv.setGravity(17)
         tv.setShadowLayer(1.0f,2.0f,2.0f,-16777216)
-
-        PTMenu.getIcon(PTUI.this)(img)(imgV)
+        imgV.setTag(HttpUtil.BASE_URL + URLS.ptIcon+img)
+        ImageLoaderFactory.getImageLoader(PTUI.this).displayImage(HttpUtil.BASE_URL + URLS.ptIcon+img,PTUI.this,imgV)
+//        PTMenu.getIcon(PTUI.this)(img)(imgV)
         tv.setText(PTMenu.noteValue(e,"text"))
         val t3 = System.currentTimeMillis()
         Log.d("aa.com","GridViewAdapter t3 " + (t3 - t1))
@@ -667,7 +742,7 @@ class PTUI extends PTActivity with FindView with java.util.Observer{
   }
 
 
-  class ListViewAdapter(list: java.util.List[Element]) extends BaseAdapter{
+  class ListViewAdapter(list: List[Node]) extends BaseAdapter{
     def getView(p1: Int, p2: View, p3: ViewGroup): View = {
 
       if(p2 == null){
@@ -676,7 +751,7 @@ class PTUI extends PTActivity with FindView with java.util.Observer{
         val t2 = System.currentTimeMillis()
         Log.d("aa.com","GridViewAdapter t2 " + (t2 - t1))
         val tv:TextView = view.findViewById(R.id.lItemTitle).asInstanceOf[TextView]
-        val e = list.get(p1)
+        val e = list.apply(p1)
         tv.setText(PTMenu.noteValue(e,"text"))
         val t3 = System.currentTimeMillis()
         Log.d("aa.com","ListViewAdapter t3 " + (t3 - t1))
@@ -691,11 +766,11 @@ class PTUI extends PTActivity with FindView with java.util.Observer{
 
     def getCount: Int = list.size
   }
-  class MenuItemListener(list: java.util.List[Element]) extends android.widget.AdapterView.OnItemClickListener{
+  class MenuItemListener(list: List[Node]) extends android.widget.AdapterView.OnItemClickListener{
     def onItemClick(p1: AdapterView[_], p2: View, p3: Int, p4: Long) {
       //      <item id="1.1" upid="1" type="list" img="account_mgr.png" msg="goListMenu(1.1)"
       //            text="账户管理">
-      val e = list.get(p3);
+      val e = list.apply(p3);
       navigate(e)
     }
   }
@@ -711,11 +786,10 @@ class PTLogin extends PTActivity{
     setContentView(loginView)
     receiver = new MyReceiver(sessionHandler)
     registerReceiver(receiver, new IntentFilter("cc.ptlogout"))
-    PTGet.ptGet(URLS.ptUUID){
-      uuid: String =>
-        App.shareContext.putToSession("uuid",uuid)
-        Log.d("ptGet","uuid" + uuid)
-    }
+    PTGet.ptFutureGet(
+          url = URLS.ptUUID,
+      success = (uuid:String) => App.ptApp.putToSession("uuid",uuid),
+         fail = (s:String) =>{})
   }
 
 
@@ -729,11 +803,10 @@ class PTLogin extends PTActivity{
     if(findViewById(R.id.ImageViewXykVerifyCode) != null){
       getCpCode(cpImg)
     }
-    PTGet.ptGet(URLS.ptUUID){
-      uuid: String =>
-        App.shareContext.putToSession("uuid",uuid)
-        Log.d("ptGet","uuid" + uuid)
-    }
+    PTGet.ptFutureGet(
+          url = URLS.ptUUID,
+      success = (uuid:String) => App.ptApp.putToSession("uuid",uuid),
+         fail = (s:String) =>{})
   }
 
   def loginView = {
@@ -753,7 +826,7 @@ class PTLogin extends PTActivity{
           Map("mobileNo" -> uid.getText.toString,
             "passWord" -> upd.getText.toString,
             "captCode" -> ucp.getText.toString,
-            "uuid" -> App.shareContext.getFromSession("uuid"))
+            "uuid" -> App.ptApp.getFromSession("uuid"))
         PTPost.ptPostWithProcess(PTLogin.this)(URLS.ptPostLogin)(userInfo)(func)
       }
     })
@@ -761,13 +834,13 @@ class PTLogin extends PTActivity{
   }
 
 
-  val func = (response:Element) => {
+  val func = (response:Node) => {
     if("0".equals(PTMenu.noteValue(response,"status")))
     {
       sendBroadcast(new Intent("cc.login"))
 
       if(PTMenu.noteValue(response,"token") != null)
-        App.shareContext.putToSession("token",PTMenu.noteValue(response,"token"))
+        App.ptApp.putToSession("token",PTMenu.noteValue(response,"token"))
 
       val intent = new Intent().setClass(PTLogin.this, classOf[PTUI])
       intent.putExtra("superId",PTMenu.logTabId)
@@ -781,7 +854,7 @@ class PTLogin extends PTActivity{
       setContentView(decorView)
     }
     else{
-      PTMenu.messageAlertDialog(PTLogin.this)(response.asXML()){}.show()
+      PTMenu.messageAlertDialog(PTLogin.this)(response.text){}.show()
     }
   }
 
@@ -810,7 +883,7 @@ class PTLogin extends PTActivity{
     val onStart = {
       cpImg.setImageResource(R.drawable.dcode)
     }
-    PTGet.imageGetAndRetry(3)(URLS.ptCapt+App.shareContext.getFromSession("uuid"))(onStart)(onSuccess)(null)(null)
+    PTGet.imageGetAndRetry(3)(URLS.ptCapt+App.ptApp.getFromSession("uuid"))(onStart)(onSuccess)(null)(null)
   }
 
 }

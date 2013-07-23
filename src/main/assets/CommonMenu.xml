@@ -1,0 +1,783 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MenuConfig>
+	<ERRNO>0</ERRNO>
+	<item id="0" upid="0" Name="" type="grid" img="" msg="" text="">
+		<item id="1" upid="0" Name="DebitCard" type="grid" img="icon_myfavorite"
+			msg="goGridMenu(1)" text="一卡通">
+			<item id="1.0" upid="1" type="web" img="homepage.png"
+				msg="PostRequest(CommonCtl,GetUIFile,/Login/Client/AndroidWelcomePage.aspx)"
+				text="欢迎页"></item>
+			<item id="1.1" upid="1" type="list" img="account_mgr.png" msg="goListMenu(1.1)"
+				text="账户管理">
+				<item id="1.1.1" upid="1.1" type="web" img=""
+					msg="PostRequest(CommonCtl,GetUIFile,/DebitCard/AccountManage/AM_QueryAccount.aspx)"
+					text="账户查询"></item>
+				<item id="1.1.2" upid="1.1" type="web" img=""
+					msg="PostRequest(CommonCtl,GetUIFile,/DebitCard/AccountManage/AM_QueryTransaction.aspx)"
+					text="交易查询"></item>
+				<item id="1.1.3" upid="1.1" type="list" img="" msg="goListMenu(1.1.3)"
+					text="密码管理">
+					<item id="1.1.3.1" upid="1.1.3" type="web" img=""
+						msg="PostRequest(CommonCtl,GetUIFile,/DebitCard/AccountManage/AM_ModifyQueryPwd.aspx)"
+						text="查询密码修改"></item>
+					<item id="1.1.3.2" upid="1.1.3" type="web" img=""
+						msg="PostRequest(CommonCtl,GetUIFile,/DebitCard/AccountManage/AM_ResetQueryPwd.aspx)"
+						text="查询密码重置"></item>
+					<item id="1.1.3.3" upid="1.1.3" type="web" img=""
+						msg="PostRequest(CommonCtl,GetUIFile,/DebitCard/AccountManage/AM_ModifyTransPwd.aspx)"
+						text="取款密码修改"></item>
+					<item id="1.1.3.4" upid="1.1.3" type="web" img=""
+						msg="PostRequest(CommonCtl,GetUIFile,/DebitCard/AccountManage/NP_ResetNPPwd.aspx)"
+						text="网上支付密码重置"></item>
+					<item id="1.1.3.5" upid="1.1.3" type="web" img=""
+						msg="PostRequest(CommonCtl,GetUIFile,/Invest/Fund/FinanceAccount/FA_ModifyPwd.aspx)"
+						text="理财专户密码修改"></item>
+					<item id="1.1.3.6" upid="1.1.3" type="web" img=""
+						msg="PostRequest(CommonCtl,GetUIFile,/Invest/Gold/AccountManage/AM_ModifyPwd.aspx)"
+						text="黄金专户密码修改"></item>
+				</item>
+				<item id="1.1.4" upid="1.1" type="web" img=""
+					msg="PostRequest(CommonCtl,GetUIFile,/DebitCard/AccountManage/AM_ReportLoss.aspx)"
+					text="挂失"></item>
+				<item id="1.1.5" upid="1.1" type="web" img=""
+					msg="PostRequest(CommonCtl,GetUIFile,/DebitCard/AccountManage/AM_ReportLossFreeze.aspx)"
+					text="冻结"></item>
+				<item id="1.1.6" upid="1.1" type="web" img=""
+					msg="PostRequest(CommonCtl,GetUIFile,/DebitCard/AccountManage/AM_SetDayLimitForATMPOS.aspx)"
+					text="ATM、POS限额"></item>
+			</item>
+			<item id="1.2" upid="1" type="list" img="self_transfer.png" msg="goListMenu(1.2)"
+				text="自助转账">
+				<item id="1.2.1" upid="1.2" type="web" img=""
+					msg="PostRequest(CommonCtl,GetUIFile,/DebitCard/TransferManage/ProtocolTransfer/TF_ProtocolTransfer.aspx)"
+					text="协议转账"></item>
+				<item id="1.2.2" upid="1.2" type="list" img="" msg="goListMenu(1.2.2)"
+					text="定活互转">
+					<item id="1.2.2.1" upid="1.2.2" type="web" img=""
+						msg="PostRequest(CommonCtl,GetUIFile,/DebitCard/TransferManage/FixCurrentTransfer/TF_Current2Fix.aspx)"
+						text="活期转定期"></item>
+					<item id="1.2.2.2" upid="1.2.2" type="web" img=""
+						msg="PostRequest(CommonCtl,GetUIFile,/DebitCard/TransferManage/FixCurrentTransfer/TF_Fix2Current.aspx)"
+						text="定期转活期"></item>
+				</item>
+				<item id="1.2.3" upid="1.2" type="list" img="" msg="goListMenu(1.2.3)"
+					text="银证转帐">
+					<item id="1.2.3.1" upid="1.2.3" type="web" img=""
+						msg="PostRequest(CommonCtl,GetUIFile,/DebitCard/TransferManage/StockTransfer/TF_Bank2Stock.aspx)"
+						text="活期转保证金"></item>
+					<item id="1.2.3.2" upid="1.2.3" type="web" img=""
+						msg="PostRequest(CommonCtl,GetUIFile,/DebitCard/TransferManage/StockTransfer/TF_Stock2Bank.aspx)"
+						text="保证金转活期"></item>
+					<item id="1.2.3.3" upid="1.2.3" type="web" img=""
+						msg="PostRequest(CommonCtl,GetUIFile,/DebitCard/TransferManage/StockTransfer/TF_BankStockQueryFunds.aspx)"
+						text="查询保证金余额"></item>
+					<item id="1.2.3.4" upid="1.2.3" type="web" img=""
+						msg="PostRequest(CommonCtl,GetUIFile,/DebitCard/TransferManage/StockTransfer/TF_BankStockQueryHist.aspx)"
+						text="查询簿记历史"></item>
+				</item>
+				<item id="1.2.4" upid="1.2" type="list" img="" msg="goListMenu(1.2.4)"
+					text="通知存款转账">
+					<item id="1.2.4.1" upid="1.2.4" type="web" img=""
+						msg="PostRequest(CommonCtl,GetUIFile,/DebitCard/TransferManage/TongZhiTransfer/TF_Current2TongZhi.aspx)"
+						text="活期转通知存款"></item>
+					<item id="1.2.4.2" upid="1.2.4" type="web" img=""
+						msg="PostRequest(CommonCtl,GetUIFile,/DebitCard/TransferManage/TongZhiTransfer/TF_TongZhi2Current.aspx)"
+						text="通知存款转活期"></item>
+					<item id="1.2.4.3" upid="1.2.4" type="web" img=""
+						msg="PostRequest(CommonCtl,GetUIFile,/DebitCard/TransferManage/TongZhiTransfer/TF_TongZhiQueryCancel.aspx)"
+						text="通知存款查询和取消"></item>
+				</item>
+				<item id="1.2.5" upid="1.2" type="list" img="" msg="goListMenu(1.2.5)"
+					text="转账汇款">
+					<item id="1.2.5.1" upid="1.2.5" type="web" img=""
+						msg="PostRequest(CommonCtl,GetUIFile,/DebitCard/TransferManage/TransferToAnyAcc/TF_CMBSameCityStepOne.aspx)"
+						text="招行同城转账"></item>
+					<item id="1.2.5.2" upid="1.2.5" type="web" img=""
+						msg="PostRequest(CommonCtl,GetUIFile,/DebitCard/TransferManage/TransferToAnyAcc/TF_CMBDifferentCityStepOne.aspx)"
+						text="招行异地汇款"></item>
+					<item id="1.2.5.3" upid="1.2.5" type="web" img=""
+						msg="PostRequest(CommonCtl,GetUIFile,/DebitCard/TransferManage/TransferToAnyAcc/TF_NotCMBSameCityStepOne.aspx)"
+						text="跨行同城转账"></item>
+					<item id="1.2.5.4" upid="1.2.5" type="web" img=""
+						msg="PostRequest(CommonCtl,GetUIFile,/DebitCard/TransferManage/TransferToAnyAcc/TF_NotCMBDifferentCityStepOne.aspx)"
+						text="跨行异地汇款"></item>
+					<item id="1.2.5.5" upid="1.2.5" type="web" img=""
+						msg="PostRequest(CommonCtl,GetUIFile,/DebitCard/TransferManage/TransferToAnyAcc/TF_PayeeInfoManagement.aspx)"
+						text="收款方信息管理"></item>
+					<item id="1.2.5.6" upid="1.2.5" type="web" img=""
+						msg="PostRequest(CommonCtl,GetUIFile,/DebitCard/TransferManage/TransferToAnyAcc/TF_QureyTransactions.aspx)"
+						text="转账汇款查询"></item>
+				</item>
+				<item id="1.2.6" upid="1.2" type="list" img="" msg="goListMenu(1.2.6)"
+					text="手机号转账">
+					<item id="1.2.6.1" upid="1.2.6" type="web" img=""
+						msg="PostRequest(CommonCtl,GetUIFile,/DebitCard/TransferManage/TransferToMobile/TF_TransferToMobileNoStepOne.aspx)"
+						text="手机号转账(付款)"></item>
+					<item id="1.2.6.2" upid="1.2.6" type="web" img=""
+						msg="PostRequest(CommonCtl,GetUIFile,/DebitCard/TransferManage/TransferToMobile/TF_ReceiveMoneyFromMobile.aspx)"
+						text="手机号转账(收款)"></item>
+					<item id="1.2.6.3" upid="1.2.6" type="web" img=""
+						msg="PostRequest(CommonCtl,GetUIFile,/DebitCard/TransferManage/TransferToMobile/TF_PayeeInfoManagementMobile.aspx)"
+						text="收款方信息管理"></item>
+					<item id="1.2.6.4" upid="1.2.6" type="web" img=""
+						msg="PostRequest(CommonCtl,GetUIFile,/DebitCard/TransferManage/TransferToMobile/TF_QureyMobileTransactions.aspx)"
+						text="付款查询"></item>
+				</item>
+				<item id="1.2.7" upid="1.2" type="web" img=""
+					msg="PostRequest(CommonCtl,GetUIFile,/DebitCard/AccountManage/AM_QueryTransaction.aspx)"
+					text="交易查询"></item>
+			</item>
+			<item id="1.3" upid="1" type="list" img="self_pay.png" msg="goListMenu(1.3)"
+				text="自助缴费">
+				<item id="1.3.1" upid="1.3" type="web" img=""
+					msg="PostRequest(CommonCtl,GetUIFile,/DebitCard/SelfPayFee/pf_ProtocalPayFee.aspx)"
+					text="缴费"></item>
+				<item id="1.3.2" upid="1.3" type="web" img=""
+					msg="PostRequest(CommonCtl,GetUIFile,/DebitCard/SelfPayFee/PF_ProtocalPayFeeApply.aspx)"
+					text="功能申请"></item>
+				<item id="1.3.3" upid="1.3" type="web" img=""
+					msg="PostRequest(CommonCtl,GetUIFile,/DebitCard/SelfPayFee/pf_ProtocalCancel.aspx)"
+					text="功能取消"></item>
+			</item>
+			<item id="1.4" upid="1" type="list" img="netpay.png" msg="goListMenu(1.4)"
+				text="网上支付">
+				<item id="1.4.1" upid="1.4" type="web" img=""
+					msg="PostRequest(CommonCtl,GetUIFile,/DebitCard/NetPayManage/NP_QueryDeal.aspx)"
+					text="交易查询"></item>
+				<item id="1.4.2" upid="1.4" type="web" img=""
+					msg="PostRequest(CommonCtl,GetUIFile,/DebitCard/NetPayManage/NP_ManageLimit.aspx)"
+					text="额度管理"></item>
+			</item>
+			<item id="1.5" upid="1" type="list" img="invest_mgr.png" msg="goListMenu(1.5)"
+				text="投资管理">
+				<item id="1.5.1" upid="1.5" type="list" img="" msg="goListMenu(1.5.1)"
+					text="基金">
+					<item id="1.5.1.1" upid="1.5.1" type="list" img=""
+						msg="goListMenu(1.5.1.1)" text="基金交易">
+						<item id="1.5.1.1.1" upid="1.5.1.1" type="web" img=""
+							msg="PostRequest(CommonCtl,GetUIFile,/Invest/Fund/FundTransaction/JJ_QueryFundProducts.aspx)"
+							text="购买"></item>
+						<item id="1.5.1.1.2" upid="1.5.1.1" type="web" img=""
+							msg="PostRequest(CommonCtl,GetUIFile,/Invest/Fund/FundTransaction/QueryFundInAcc.aspx)"
+							text="赎回"></item>
+						<item id="1.5.1.1.3" upid="1.5.1.1" type="web" img=""
+							msg="PostRequest(CommonCtl,GetUIFile,/Invest/Fund/FundTransaction/QueryTodayEntrust.aspx)"
+							text="撤单"></item>
+						<item id="1.5.1.1.4" upid="1.5.1.1" type="web" img=""
+							msg="PostRequest(CommonCtl,GetUIFile,/Invest/Fund/FundTransaction/JJSetAutoInvest.aspx)"
+							text="分红选择"></item>
+						<item id="1.5.1.1.5" upid="1.5.1.1" type="web" img=""
+							msg="PostRequest(CommonCtl,GetUIFile,/Invest/Fund/FundTransaction/JJChange.aspx)"
+							text="基金转换"></item>
+					</item>
+					<item id="1.5.1.2" upid="1.5.1" type="list" img=""
+						msg="goListMenu(1.5.1.2)" text="基金查询">
+						<item id="1.5.1.2.1" upid="1.5.1.2" type="web" img=""
+							msg="PostRequest(CommonCtl,GetUIFile,/Invest/Fund/FundTransaction/JJ_QueryFundProducts.aspx)"
+							text="基金产品"></item>
+						<item id="1.5.1.2.2" upid="1.5.1.2" type="web" img=""
+							msg="PostRequest(CommonCtl,GetUIFile,/Invest/Fund/FundTransaction/QueryFundInAcc.aspx)"
+							text="基金持仓"></item>
+						<item id="1.5.1.2.3" upid="1.5.1.2" type="web" img=""
+							msg="PostRequest(CommonCtl,GetUIFile,/Invest/Fund/FundTransaction/QueryTodayEntrust.aspx)"
+							text="当前申请"></item>
+						<item id="1.5.1.2.4" upid="1.5.1.2" type="web" img=""
+							msg="PostRequest(CommonCtl,GetUIFile,/Invest/Fund/FundTransaction/QueryHistDeal.aspx)"
+							text="历史确认"></item>
+					</item>
+					<item id="1.5.1.3" upid="1.5.1" type="list" img=""
+						msg="goListMenu(1.5.1.3)" text="基金账号">
+						<item id="1.5.1.3.1" upid="1.5.1.3" type="web" img=""
+							msg="PostRequest(CommonCtl,GetUIFile,/Invest/Fund/FundTransaction/JJ_ManageAccount.aspx)"
+							text="基金账号查询"></item>
+						<item id="1.5.1.3.2" upid="1.5.1.3" type="web" img=""
+							msg="PostRequest(CommonCtl,GetUIFile,/Invest/Fund/FundTransaction/JJ_OpenAccount.aspx)"
+							text="基金开户"></item>
+						<item id="1.5.1.3.3" upid="1.5.1.3" type="web" img=""
+							msg="PostRequest(CommonCtl,GetUIFile,/Invest/Fund/FundTransaction/JJ_ManageAccount.aspx)"
+							text="基金关户"></item>
+						<item id="1.5.1.3.4" upid="1.5.1.3" type="web" img=""
+							msg="PostRequest(CommonCtl,GetUIFile,/Invest/Fund/FundTransaction/JJ_ManageAccount.aspx)"
+							text="修改资料"></item>
+					</item>
+					<item id="1.5.1.4" upid="1.5.1" type="list" img=""
+						msg="goListMenu(1.5.1.4)" text="理财专户">
+						<item id="1.5.1.4.1" upid="1.5.1.4" type="web" img=""
+							msg="PostRequest(CommonCtl,GetUIFile,/Invest/Fund/FinanceAccount/FA_QueryAccount.aspx)"
+							text="专户查询"></item>
+						<item id="1.5.1.4.2" upid="1.5.1.4" type="web" img=""
+							msg="PostRequest(CommonCtl,GetUIFile,/Invest/Fund/FinanceAccount/FA_QueryTransaction.aspx)"
+							text="历史账页"></item>
+						<item id="1.5.1.4.3" upid="1.5.1.4" type="list" img=""
+							msg="goListMenu(1.5.1.4.3)" text="专户转账">
+							<item id="1.5.1.4.3.1" upid="1.5.1.4.3" type="web" img=""
+								msg="PostRequest(CommonCtl,GetUIFile,/Invest/Fund/FinanceAccount/FA_Current2FA.aspx)"
+								text="活期转理财专户"></item>
+							<item id="1.5.1.4.3.2" upid="1.5.1.4.3" type="web" img=""
+								msg="PostRequest(CommonCtl,GetUIFile,/Invest/Fund/FinanceAccount/FA_FA2Current.aspx)"
+								text="理财专户转活期"></item>
+						</item>
+						<item id="1.5.1.4.4" upid="1.5.1.4" type="web" img=""
+							msg="PostRequest(CommonCtl,GetUIFile,/Invest/Fund/FinanceAccount/FA_ModifyPwd.aspx)"
+							text="密码修改"></item>
+						<item id="1.5.1.4.5" upid="1.5.1.4" type="web" img=""
+							msg="PostRequest(CommonCtl,GetUIFile,/Invest/Fund/FinanceAccount/FA_OpenAccount.aspx)"
+							text="理财专户开户"></item>
+					</item>
+					<item id="1.5.1.5" upid="1.5.1" type="list" img=""
+						msg="goListMenu(1.5.1.5)" text="电子合同">
+						<item id="1.5.1.5.1" upid="1.5.1.5" type="web" img=""
+							msg="PostRequest(CommonCtl,GetUIFile,/Invest/Fund/ElectronicContract/EC_QueryAllEProList.aspx)"
+							text="电子合同签署"></item>
+						<item id="1.5.1.5.2" upid="1.5.1.5" type="web" img=""
+							msg="PostRequest(CommonCtl,GetUIFile,/Invest/Fund/ElectronicContract/EC_QueryEProSet.aspx)"
+							text="电子合同查询"></item>
+					</item>
+				</item>
+				<item id="1.5.2" upid="1.5" type="list" img="" msg="goListMenu(1.5.2)"
+					text="证券">
+					<item id="1.5.2.2" upid="1.5.2" type="list" img=""
+						msg="goListMenu(1.5.2.2)" text="银证转账">
+						<item id="1.5.2.2.1" upid="1.5.2.2" type="web" img=""
+							msg="PostRequest(CommonCtl,GetUIFile,/DebitCard/TransferManage/StockTransfer/TF_Bank2Stock.aspx)"
+							text="活期转保证金"></item>
+						<item id="1.5.2.2.2" upid="1.5.2.2" type="web" img=""
+							msg="PostRequest(CommonCtl,GetUIFile,/DebitCard/TransferManage/StockTransfer/TF_Stock2Bank.aspx)"
+							text="保证金转活期"></item>
+						<item id="1.5.2.2.3" upid="1.5.2.2" type="web" img=""
+							msg="PostRequest(CommonCtl,GetUIFile,/DebitCard/TransferManage/StockTransfer/TF_BankStockQueryFunds.aspx)"
+							text="查询保证金余额"></item>
+						<item id="1.5.2.2.4" upid="1.5.2.2" type="web" img=""
+							msg="PostRequest(CommonCtl,GetUIFile,/DebitCard/TransferManage/StockTransfer/TF_BankStockQueryHist.aspx)"
+							text="查询簿记历史"></item>
+					</item>
+				</item>
+				<item id="1.5.3" upid="1.5" type="list" img="" msg="goListMenu(1.5.3)"
+					text="受托理财">
+					<item id="1.5.3.1" upid="1.5.3" type="web" img=""
+						msg="PostRequest(CommonCtl,GetUIFile,/Invest/EntrustedFinancing/EF_QueryProduct.aspx)"
+						text="购买"></item>
+					<item id="1.5.3.2" upid="1.5.3" type="web" img=""
+						msg="PostRequest(CommonCtl,GetUIFile,/Invest/EntrustedFinancing/EF_QueryProduct.aspx)"
+						text="理财产品"></item>
+					<item id="1.5.3.3" upid="1.5.3" type="web" img=""
+						msg="PostRequest(CommonCtl,GetUIFile,/Invest/EntrustedFinancing/EF_QueryFundInAcc.aspx)"
+						text="当前持仓"></item>
+					<item id="1.5.3.4" upid="1.5.3" type="web" img=""
+						msg="PostRequest(CommonCtl,GetUIFile,/Invest/EntrustedFinancing/EF_QueryEntrust.aspx)"
+						text="当前委托"></item>
+					<item id="1.5.3.5" upid="1.5.3" type="web" img=""
+						msg="PostRequest(CommonCtl,GetUIFile,/Invest/EntrustedFinancing/EF_QueryHist.aspx)"
+						text="历史交易"></item>
+					<item id="1.5.3.6" upid="1.5.3" type="web" img=""
+						msg="PostRequest(CommonCtl,GetUIFile,/Invest/EntrustedFinancing/EF_QueryBalance.aspx)"
+						text="预约额度"></item>
+				</item>
+				<item id="1.5.4" upid="1.5" type="list" img="" msg="goListMenu(1.5.4)"
+					text="招财金">
+					<item id="1.5.4.1" upid="1.5.4" type="list" img=""
+						msg="goListMenu(1.5.4.1)" text="实物黄金交易">
+						<item id="1.5.4.1.1" upid="1.5.4.1" type="web" img=""
+							msg="PostRequest(CommonCtl,GetUIFile,/Invest/Gold/GoldTrading/GT_EntrustBuy.aspx)"
+							text="委托买入"></item>
+						<item id="1.5.4.1.2" upid="1.5.4.1" type="web" img=""
+							msg="PostRequest(CommonCtl,GetUIFile,/Invest/Gold/GoldTrading/GT_EntrustSell.aspx)"
+							text="委托卖出"></item>
+						<item id="1.5.4.1.3" upid="1.5.4.1" type="web" img=""
+							msg="PostRequest(CommonCtl,GetUIFile,/Invest/Gold/GoldTrading/GT_EntrustCancell.aspx)"
+							text="委托撤单"></item>
+						<item id="1.5.4.1.4" upid="1.5.4.1" type="web" img=""
+							msg="PostRequest(CommonCtl,GetUIFile,/Invest/Gold/GoldTrading/GT_PickupGoodsApply.aspx)"
+							text="提货申请"></item>
+						<item id="1.5.4.1.5" upid="1.5.4.1" type="web" img=""
+							msg="PostRequest(CommonCtl,GetUIFile,/Invest/Gold/GoldTrading/GT_CancelDeliveryOrder.aspx)"
+							text="提货申请撤单"></item>
+					</item>
+					<item id="1.5.4.2" upid="1.5.4" type="list" img=""
+						msg="goListMenu(1.5.4.2)" text="延期黄金交易">
+						<item id="1.5.4.2.1" upid="1.5.4.2" type="web" img=""
+							msg="PostRequest(CommonCtl,GetUIFile,/Invest/Gold/DeferredTrading/DT_OpenDepository.aspx)"
+							text="委托开仓"></item>
+						<item id="1.5.4.2.2" upid="1.5.4.2" type="web" img=""
+							msg="PostRequest(CommonCtl,GetUIFile,/Invest/Gold/DeferredTrading/DT_CloseDepository.aspx)"
+							text="委托平仓"></item>
+						<item id="1.5.4.2.3" upid="1.5.4.2" type="web" img=""
+							msg="PostRequest(CommonCtl,GetUIFile,/Invest/Gold/DeferredTrading/DT_CommissionCancel.aspx)"
+							text="委托撤单"></item>
+						<item id="1.5.4.2.4" upid="1.5.4.2" type="web" img=""
+							msg="PostRequest(CommonCtl,GetUIFile,/Invest/Gold/DeferredTrading/DT_TradeOff.aspx)"
+							text="委托交收申报"></item>
+					</item>
+					<item id="1.5.4.3" upid="1.5.4" type="list" img=""
+						msg="goListMenu(1.5.4.3)" text="查询">
+						<item id="1.5.4.3.1" upid="1.5.4.3" type="web" img=""
+							msg="PostRequest(CommonCtl,GetUIFile,/Invest/Gold/QueryManage/QM_GoldIndex.aspx)"
+							text="行情查询"></item>
+						<item id="1.5.4.3.2" upid="1.5.4.3" type="list" img=""
+							msg="goListMenu(1.5.4.3.2)" text="资金库存持仓">
+							<item id="1.5.4.3.2.1" upid="1.5.4.3.2" type="web" img=""
+								msg="PostRequest(CommonCtl,GetUIFile,/Invest/Gold/QueryManage/QM_QuerySubAccount.aspx)"
+								text="专户资金查询"></item>
+							<item id="1.5.4.3.2.2" upid="1.5.4.3.2" type="web" img=""
+								msg="PostRequest(CommonCtl,GetUIFile,/Invest/Gold/QueryManage/QM_QueryPickupGoods.aspx)"
+								text="专户库存查询"></item>
+							<item id="1.5.4.3.2.3" upid="1.5.4.3.2" type="web" img=""
+								msg="PostRequest(CommonCtl,GetUIFile,/Invest/Gold/QueryManage/QM_QueryMyGoldTD.aspx)"
+								text="专户持仓查询"></item>
+						</item>
+						<item id="1.5.4.3.3" upid="1.5.4.3" type="web" img=""
+							msg="PostRequest(CommonCtl,GetUIFile,/Invest/Gold/QueryManage/QM_TodayCommission.aspx)"
+							text="当天委托"></item>
+						<item id="1.5.4.3.4" upid="1.5.4.3" type="web" img=""
+							msg="PostRequest(CommonCtl,GetUIFile,/Invest/Gold/QueryManage/QM_TodayDeal.aspx)"
+							text="当天成交"></item>
+						<item id="1.5.4.3.5" upid="1.5.4.3" type="web" img=""
+							msg="PostRequest(CommonCtl,GetUIFile,/Invest/Gold/QueryManage/QM_HistoryCommission.aspx)"
+							text="历史委托"></item>
+						<item id="1.5.4.3.6" upid="1.5.4.3" type="web" img=""
+							msg="PostRequest(CommonCtl,GetUIFile,/Invest/Gold/QueryManage/QM_HistoryDeal.aspx)"
+							text="历史成交"></item>
+						<item id="1.5.4.3.7" upid="1.5.4.3" type="web" img=""
+							msg="PostRequest(CommonCtl,GetUIFile,/Invest/Gold/QueryManage/QM_QueryMyAccount.aspx)"
+							text="专户转账查询"></item>
+						<item id="1.5.4.3.8" upid="1.5.4.3" type="web" img=""
+							msg="PostRequest(CommonCtl,GetUIFile,/Invest/Gold/QueryManage/QM_QueryDeliveryOrder.aspx)"
+							text="提货查询"></item>
+						<item id="1.5.4.3.9" upid="1.5.4.3" type="web" img=""
+							msg="PostRequest(CommonCtl,GetUIFile,/Invest/Gold/QueryManage/QM_DailyBalanceList.aspx)"
+							text="日结单查询"></item>
+						<item id="1.5.4.3.10" upid="1.5.4.3" type="web" img=""
+							msg="PostRequest(CommonCtl,GetUIFile,/Invest/Gold/QueryManage/QM_MonthlyBalanceList.aspx)"
+							text="月结单查询"></item>
+						<item id="1.5.4.3.11" upid="1.5.4.3" type="web" img=""
+							msg="PostRequest(CommonCtl,GetUIFile,/Invest/Gold/QueryManage/QM_QueryInformNote.aspx)"
+							text="通知单查询"></item>
+						<item id="1.5.4.3.12" upid="1.5.4.3" type="web" img=""
+							msg="PostRequest(CommonCtl,GetUIFile,/Invest/Gold/QueryManage/QM_QueryForcedRiskInfo.aspx)"
+							text="强平客户风险查询"></item>
+						<item id="1.5.4.3.13" upid="1.5.4.3" type="web" img=""
+							msg="PostRequest(CommonCtl,GetUIFile,/Invest/Gold/QueryManage/QM_QueryForcedPriceInfo.aspx)"
+							text="强平计算价格查询"></item>
+						<item id="1.5.4.3.14" upid="1.5.4.3" type="list" img=""
+							msg="goListMenu(1.5.4.3.14)" text="历史账页查询">
+							<item id="1.5.4.3.14.1" upid="1.5.4.3.14" type="web" img=""
+								msg="PostRequest(CommonCtl,GetUIFile,/Invest/Gold/QueryManage/QM_QueryMoneyBill.aspx)"
+								text="历史资金账页"></item>
+							<item id="1.5.4.3.14.2" upid="1.5.4.3.14" type="web" img=""
+								msg="PostRequest(CommonCtl,GetUIFile,/Invest/Gold/QueryManage/QM_QueryStockBill.aspx)"
+								text="历史库存账页"></item>
+							<item id="1.5.4.3.14.3" upid="1.5.4.3.14" type="web" img=""
+								msg="PostRequest(CommonCtl,GetUIFile,/Invest/Gold/QueryManage/QM_QueryCCBill.aspx)"
+								text="历史持仓账页"></item>
+						</item>
+					</item>
+					<item id="1.5.4.4" upid="1.5.4" type="list" img=""
+						msg="goListMenu(1.5.4.4)" text="专户管理">
+						<item id="1.5.4.4.1" upid="1.5.4.4" type="web" img=""
+							msg="PostRequest(CommonCtl,GetUIFile,/Invest/Gold/AccountManage/AM_OpenAccount.aspx)"
+							text="开户"></item>
+						<item id="1.5.4.4.2" upid="1.5.4.4" type="list" img=""
+							msg="goListMenu(1.5.4.4.2)" text="专户转账">
+							<item id="1.5.4.4.2.1" upid="1.5.4.4.2" type="web" img=""
+								msg="PostRequest(CommonCtl,GetUIFile,/Invest/Gold/AccountManage/AM_Current2Gold.aspx)"
+								text="活期转黄金专户"></item>
+							<item id="1.5.4.4.2.2" upid="1.5.4.4.2" type="web" img=""
+								msg="PostRequest(CommonCtl,GetUIFile,/Invest/Gold/AccountManage/AM_Gold2Current.aspx)"
+								text="黄金专户转活期"></item>
+						</item>
+						<item id="1.5.4.4.3" upid="1.5.4.4" type="web" img=""
+							msg="PostRequest(CommonCtl,GetUIFile,/Invest/Gold/AccountManage/AM_ModiCustInfo.aspx)"
+							text="客户信息修改"></item>
+						<item id="1.5.4.4.4" upid="1.5.4.4" type="web" img=""
+							msg="PostRequest(CommonCtl,GetUIFile,/Invest/Gold/AccountManage/AM_ModifyPwd.aspx)"
+							text="专户密码修改"></item>
+						<item id="1.5.4.4.5" upid="1.5.4.4" type="web" img=""
+							msg="PostRequest(CommonCtl,GetUIFile,/Invest/Gold/AccountManage/AM_ResetPwd.aspx)"
+							text="专户密码重置"></item>
+						<item id="1.5.4.4.6" upid="1.5.4.4" type="web" img=""
+							msg="PostRequest(CommonCtl,GetUIFile,/Invest/Gold/AccountManage/AM_AlterAccount.aspx)"
+							text="交易账号变更"></item>
+					</item>
+				</item>
+				<item id="1.5.5" upid="1.5" type="list" img="" msg="goListMenu(1.5.5)"
+					text="国债">
+					<item id="1.5.5.1" upid="1.5.5" type="web" img=""
+						msg="PostRequest(CommonCtl,GetUIFile,/Invest/DebtManage/DM_QueryNationalDebtMarket.aspx)"
+						text="凭证式国债"></item>
+					<item id="1.5.5.2" upid="1.5.5" type="web" img=""
+						msg="PostRequest(CommonCtl,GetUIFile,/Invest/DebtManage/DM_QueryMyNationalDebt.aspx)"
+						text="当前持有"></item>
+				</item>
+			</item>
+			<item id="1.6" upid="1" type="list" img="foreign_exchange_mgr.png"
+				msg="goListMenu(1.6)" text="外汇管理">
+				<item id="1.6.1" upid="1.6" type="list" img="" msg="goListMenu(1.6.1)"
+					text="外汇结汇">
+					<item id="1.6.1.1" upid="1.6.1" type="web" img=""
+						msg="PostRequest(CommonCtl,GetUIFile,/DebitCard/ForexManage/FE_SettleForex.aspx)"
+						text="结汇委托"></item>
+					<item id="1.6.1.2" upid="1.6.1" type="web" img=""
+						msg="PostRequest(CommonCtl,GetUIFile,/DebitCard/ForexManage/FE_SForexMarket.aspx)"
+						text="行情"></item>
+					<item id="1.6.1.3" upid="1.6.1" type="web" img=""
+						msg="PostRequest(CommonCtl,GetUIFile,/DebitCard/ForexManage/FE_SForexEntrust.aspx)"
+						text="当日委托"></item>
+					<item id="1.6.1.4" upid="1.6.1" type="web" img=""
+						msg="PostRequest(CommonCtl,GetUIFile,/DebitCard/ForexManage/FE_SForexHist.aspx)"
+						text="历史委托"></item>
+				</item>
+				<item id="1.6.2" upid="1.6" type="list" img="" msg="goListMenu(1.6.2)"
+					text="外汇购汇">
+					<item id="1.6.2.1" upid="1.6.2" type="web" img=""
+						msg="PostRequest(CommonCtl,GetUIFile,/DebitCard/ForexManage/FE_PurchaseForex.aspx)"
+						text="购汇委托"></item>
+					<item id="1.6.2.2" upid="1.6.2" type="web" img=""
+						msg="PostRequest(CommonCtl,GetUIFile,/DebitCard/ForexManage/FE_PForexMarket.aspx)"
+						text="行情"></item>
+					<item id="1.6.2.3" upid="1.6.2" type="web" img=""
+						msg="PostRequest(CommonCtl,GetUIFile,/DebitCard/ForexManage/FE_PForexEntrust.aspx)"
+						text="当前委托"></item>
+					<item id="1.6.2.4" upid="1.6.2" type="web" img=""
+						msg="PostRequest(CommonCtl,GetUIFile,/DebitCard/ForexManage/FE_PForexHist.aspx)"
+						text="历史委托"></item>
+				</item>
+			</item>
+			<item id="1.7" upid="1" type="list" img="loan_manage.png" msg="goListMenu(1.7)"
+				text="贷款管理">
+				<item id="1.7.1" upid="1.7" type="web" img=""
+					msg="PostRequest(CommonCtl,GetUIFile,/DebitCard/LoanManage/PersonalLoans/PL_QueryPersonalAssetQuota.aspx)"
+					text="个人贷款查询"></item>
+				<item id="1.7.2" upid="1.7" type="web" img=""
+					msg="PostRequest(CommonCtl,GetUIFile,/DebitCard/LoanManage/PersonalLoans/PL_QueryPersonalAssetOverdue.aspx)"
+					text="逾期贷款查询"></item>
+				<item id="1.7.3" upid="1.7" type="web" img=""
+					msg="PostRequest(CommonCtl,GetUIFile,/DebitCard/LoanManage/PersonalLoans/PL_QueryPersonalAssetQuota_Repay.aspx)"
+					text="随借随还还款"></item>
+			</item>
+		</item>
+		<item id="2" upid="0" Name="CreditCard" type="grid" img="icon_lifetool"
+			msg="goGridMenu(2)" text="信用卡">
+			<item id="2.0" upid="2" type="web" img="homepage.png"
+				msg="PostRequest(CommonCtl,GetUIFile,/Login/Client/AndroidWelcomePage.aspx)"
+				text="欢迎页"></item>
+			<item id="2.1" upid="2" type="list" img="customer_service.png"
+				msg="goListMenu(2.1)" text="客户管理">
+				<item id="2.1.1" upid="2.1" type="web" img=""
+					msg="PostRequest(CommonCtl,GetUIFile,/CreditCard/Account/pm_ModifyQueryPin.aspx)"
+					text="查询密码修改"></item>
+				<item id="2.1.2" upid="2.1" type="web" img=""
+					msg="PostRequest(CommonCtl,GetUIFile,/CreditCard/CustomerService/cs_SetEmail.aspx)"
+					text="邮件地址设置"></item>
+			</item>
+			<item id="2.2" upid="2" type="list" img="account_mgr.png" msg="goListMenu(2.2)"
+				text="账户管理">
+				<item id="2.2.1" upid="2.2" type="web" img=""
+					msg="PostRequest(CommonCtl,GetUIFile,/CreditCard/Account/am_QueryAccount.aspx)"
+					text="账户查询"></item>
+				<item id="2.2.2" upid="2.2" type="web" img=""
+					msg="PostRequest(CommonCtl,GetUIFile,/CreditCard/Account/am_QueryReckoningSurvey.aspx)"
+					text="已出账单查询"></item>
+				<item id="2.2.3" upid="2.2" type="web" img=""
+					msg="PostRequest(CommonCtl,GetUIFile,/CreditCard/Account/am_QueryReckoningSurveyNot.aspx)"
+					text="未出账单查询"></item>
+				<item id="2.2.4" upid="2.2" type="web" img=""
+					msg="PostRequest(CommonCtl,GetUIFile,/CreditCard/CustomerService/cs_SendReckoning.aspx)"
+					text="账单寄送方式设置"></item>
+			</item>
+			<item id="2.3" upid="2" type="list" img="repayment_mgr.png" msg="goListMenu(2.3)"
+				text="还款管理">
+				<item id="2.3.1" upid="2.3" type="web" img=""
+					msg="PostRequest(CommonCtl,GetUIFile,/CreditCard/Repay/rm_QueryAutoRepay.aspx)"
+					text="自动还款设置"></item>
+				<item id="2.3.2" upid="2.3" type="web" img=""
+					msg="PostRequest(CommonCtl,GetUIFile,/CreditCard/Repay/rm_QueryRepayDetail.aspx)"
+					text="还款明细查询"></item>
+				<item id="2.3.3" upid="2.3" type="web" img=""
+					msg="PostRequest(CommonCtl,GetUIFile,/CreditCard/Repay/rm_QueryExchange.aspx)"
+					text="购汇还款设置"></item>
+				<item id="2.3.4" upid="2.3" type="web" img=""
+					msg="PostRequest(CommonCtl,GetUIFile,/CreditCard/Repay/rm_FastPayment.aspx)"
+					text="快速还款"></item>
+			</item>
+			<item id="2.4" upid="2" type="list" img="card_mgr.png" msg="goListMenu(2.4)"
+				text="卡片管理">
+				<item id="2.4.1" upid="2.4" type="web" img=""
+					msg="PostRequest(CommonCtl,GetUIFile,/CreditCard/CustomerService/CardManage/cm_QueryCardLimit.aspx)"
+					text="卡片额度设置"></item>
+				<item id="2.4.2" upid="2.4" type="web" img=""
+					msg="PostRequest(CommonCtl,GetUIFile,/CreditCard/CustomerService/CardManage/cm_QueryEnforceCard.aspx)"
+					text="信用卡开卡"></item>
+				<item id="2.4.3" upid="2.4" type="list" img="" msg="goListMenu(2.4.3)"
+					text="交易密码管理">
+					<item id="2.4.3.1" upid="2.4.3" type="web" img=""
+						msg="PostRequest(CommonCtl,GetUIFile,/CreditCard/Account/pm_QueryCashPin.aspx)"
+						text="交易密码设置"></item>
+					<item id="2.4.3.2" upid="2.4.3" type="web" img=""
+						msg="PostRequest(CommonCtl,GetUIFile,/CreditCard/Account/pm_QueryCashPin.aspx)"
+						text="预借现金功能设置"></item>
+					<item id="2.4.3.3" upid="2.4.3" type="web" img=""
+						msg="PostRequest(CommonCtl,GetUIFile,/CreditCard/Account/pm_QueryCashPin.aspx)"
+						text="刷卡验密功能设置"></item>
+				</item>
+			</item>
+			<item id="2.5" upid="2" type="list" img="self_pay.png" msg="goListMenu(2.5)"
+				text="自助缴费">
+				<item id="2.5.1" upid="2.5" type="web" img=""
+					msg="PostRequest(CommonCtl,GetUIFile,/CreditCard/SelfPayFee/pf_ProtocalQuery.aspx)"
+					text="缴费"></item>
+				<item id="2.5.2" upid="2.5" type="web" img=""
+					msg="PostRequest(CommonCtl,GetUIFile,/CreditCard/SelfPayFee/pf_PayFeeApply.aspx)"
+					text="功能申请"></item>
+				<item id="2.5.3" upid="2.5" type="web" img=""
+					msg="PostRequest(CommonCtl,GetUIFile,/CreditCard/SelfPayFee/pf_ProtocalEnd.aspx)"
+					text="功能取消"></item>
+				<item id="2.5.4" upid="2.5" type="web" img=""
+					msg="PostRequest(CommonCtl,GetUIFile,/CreditCard/SelfPayFee/pf_QueryPayFeeDetail.aspx)"
+					text="缴费记录查询"></item>
+			</item>
+			<item id="2.6" upid="2" type="list" img="netpay.png" msg="goListMenu(2.6)"
+				text="网上支付">
+				<item id="2.6.1" upid="2.6" type="web" img=""
+					msg="PostRequest(CommonCtl,GetUIFile,/CreditCard/NetPay/np_QueryDeal.aspx)"
+					text="交易查询"></item>
+				<item id="2.6.2" upid="2.6" type="web" img=""
+					msg="PostRequest(CommonCtl,GetUIFile,/CreditCard/NetPay/np_ManageLimit.aspx)"
+					text="额度设置"></item>
+				<item id="2.6.3" upid="2.6" type="web" img=""
+					msg="PostRequest(CommonCtl,GetUIFile,/CreditCard/NetPay/np_ManageApply.aspx)"
+					text="功能申请"></item>
+			</item>
+			<item id="2.7" upid="2" type="list" img="point_mgr.png" msg="goListMenu(2.7)"
+				text="积分管理">
+				<item id="2.7.1" upid="2.7" type="web" img=""
+					msg="PostRequest(CommonCtl,GetUIFile,/CreditCard/CustomerService/CardManage/psm_QueryPoints.aspx)"
+					text="积分查询"></item>
+			</item>
+		</item><!--for 一网通用户登录 -->
+		<item id="4" upid="0" type="grid" img="icon_phonebank" msg="goGridMenu(4)"
+			text="一网通用户" Name="User">
+			<item id="4.0" upid="4" type="web" img="homepage.png"
+				msg="PostRequest(CommonCtl,GetUIFile,/Login/Client/AndroidWelcomePage.aspx)"
+				text="欢迎页"></item>
+			<item id="4.1" upid="4" type="web" img="userinfo_mgr.png"
+				msg="PostRequest(CommonCtl,GetUIFile,/User/AccountInfo.aspx)" text="用户信息管理"></item>
+			<item id="4.2" upid="4" type="web" img="relate_debitcard.png"
+				msg="PostRequest(CommonCtl,GetUIFile,/User/CmbCardBound.aspx)" text="关联一卡通"></item>
+			<item id="4.3" upid="4" type="web" img="relate_creditcard.png"
+				msg="PostRequest(CommonCtl,GetUIFile,/User/CmbCreditBoundV2.aspx)"
+				text="关联信用卡"></item>
+		</item><!--for 非一网通用户登录，包括一卡通或者信用卡登录 AD CD -->
+		<item id="5" upid="0" type="grid" img="user_registration.png" msg="goGridMenu(5)"
+			text="一网通用户" Name="NoUser">
+			<item id="5.1" upid="5" type="web" img="user_registration.png"
+				msg="PostRequest(CommonCtl,GetUIFile,/Toolkit/AllInOneNetRegister/AIO_Agreement.aspx)"
+				text="用户注册" Name="NoUser"></item>
+		</item><!--for 一网通登录时，无一卡通 DA -->
+		<item id="6" upid="0" type="grid" img="" msg="goGridMenu(6)"
+			text="一卡通" Name="NoDebitCard">
+			<item id="6.1" upid="6" type="web" img="relate_debitcard.png"
+				msg="PostRequest(CommonCtl,GetUIFile,/User/CmbCardBound.aspx)" text="关联一卡通"></item>
+		</item><!--for 一网通用户登录无绑定信用卡时使用 DC -->
+		<item id="7" upid="0" type="grid" img="" msg="goGridMenu(7)"
+			text="信用卡" Name="NoCreditCard0">
+			<item id="7.1" upid="7" type="web" img="relate_creditcard.png"
+				msg="PostRequest(CommonCtl,GetUIFile,/User/CmbCreditBoundV2.aspx)"
+				text="关联信用卡"></item>
+			<item id="7.2" upid="7" type="web" img="creditcard_open.png"
+				msg="PostRequest(CommonCtl,GetUIFile,/CreditCard/CustomerService/CardManage/cs_ActivateCreditCard.aspx)"
+				text="信用卡开卡"></item>
+		</item><!--for 一卡通登录无绑定信用卡时使用 AC -->
+		<item id="8" upid="0" type="grid" img="" msg="goGridMenu(8)"
+			text="信用卡" Name="NoCreditCard1">
+			<item id="8.1" upid="8" type="web" img="creditcard_open.png"
+				msg="PostRequest(CommonCtl,GetUIFile,/CreditCard/CustomerService/CardManage/cs_ActivateCreditCard.aspx)"
+				text="信用卡开卡"></item>
+		</item><!--金融助手，Android菜单，登录后，for... 版本使用 -->
+		<item id="9" upid="0" type="grid" img="icon_financialtool" msg="goGridMenu(9)"
+			text="金融助手" Name="Finacial">
+			<item id="9.1" upid="9" type="func" img="preferential_news.png"
+				msg="Post(http://m.cmbchina.com/personal/promotionlist.aspx?version=android)"
+				text="优惠快讯"></item>
+			<item id="9.2" upid="9" type="grid" img="preferential_shop.png"
+				msg="goGridMenu(9.2)" text="商户查询">
+				<item id="9.2.1" upid="9.2" type="func" img="preferential_shop.png"
+					msg="Post(http://m.cmbchina.com/CreditCard/FavShop.aspx?version=androidamp;gps=true)"
+					text="优惠商户"></item>
+				<item id="9.2.2" upid="9.2" type="func" img="amortization_trade1.png"
+					msg="Post(http://m.cmbchina.com/MCreditCardWeb/stepshop/stepshoplist.aspx?version=android)"
+					text="分期商户"></item>
+			</item>
+			<item id="9.3" upid="9" type="grid" img="branch_query.png" msg="goGridMenu(9.3)"
+				text="网点查询">
+				<item id="9.3.1" upid="9.3" type="func" img="branches.png"
+					msg="Post(http://m.cmbchina.com/branch/CmbSubbranchSearch.aspx?version=androidamp;gps=true)"
+					text="营业网点查询"></item>
+				<item id="9.3.2" upid="9.3" type="func" img="self_bank.png"
+					msg="Post(http://m.cmbchina.com/branch/CmbAutobankSearch.aspx?version=androidamp;gps=true)"
+					text="自助银行查询"></item>
+				<item id="9.3.3" upid="9.3" type="func" img="atm_query.png"
+					msg="Post(http://m.cmbchina.com/branch/CmbAtmSearch.aspx?version=androidamp;gps=true)"
+					text="ATM查询"></item>
+			</item>
+			<item id="9.4" upid="9" type="grid" img="financial_market.png"
+				msg="goGridMenu(9.4)" text="金融行情">
+				<item id="9.4.1" upid="9.4" type="func" img="deposit_rates.png"
+					msg="Post(http://m.cmbchina.com/Rate/InterestRate.aspx?version=android)"
+					text="存款利率"></item>
+				<item id="9.4.2" upid="9.4" type="func" img="loan_rates.png"
+					msg="Post(http://m.cmbchina.com/Rate/CDRate.aspx?version=android)"
+					text="贷款利率"></item>
+				<item id="9.4.3" upid="9.4" type="func" img="funds_npv.png"
+					msg="Post(http://m.cmbchina.com/Rate/FundRate.aspx?version=android)"
+					text="基金净值"></item>
+				<item id="9.4.4" upid="9.4" type="func" img="financing_product.png"
+					msg="Post(http://m.cmbchina.com/rate/FinancingRate.aspx?version=android)"
+					text="理财产品净值"></item>
+				<item id="9.4.5" upid="9.4" type="func" img="foreign_exchange_rates.png"
+					msg="Post(http://m.cmbchina.com/Rate/FxRealrate.aspx?version=android)"
+					text="外汇汇率"></item>
+				<item id="9.4.6" upid="9.4" type="func" img="gold_market.png"
+					msg="Post(http://m.cmbchina.com/Rate/GoldRealrate.aspx?version=android)"
+					text="黄金行情"></item>
+				<item id="9.4.7" upid="9.4" type="func" img="offshore_deposit_rates.png"
+					msg="Post(http://m.cmbchina.com/rate/offshorerate.aspx?version=android)"
+					text="离岸存款利率"></item>
+				<item id="9.4.8" upid="9.4" type="func" img="national_debt_price.png"
+					msg="Post(http://m.cmbchina.com/rate/bondprice.aspx?version=android)"
+					text="国债交易报价"></item>
+				<item id="9.4.9" upid="9.4" type="func" img="noble_metal_price1.png"
+					msg="Post(http://m.cmbchina.com/rate/mentalprice.aspx?version=android)"
+					text="贵金属报价"></item>
+			</item>
+			<item id="9.5" upid="9" type="grid" img="invest_info.png" msg="goGridMenu(9.5)"
+				text="投资资讯">
+				<item id="9.5.1" upid="9.5" type="func" img="securities_info.png"
+					msg="Post(http://m.cmbchina.com/newsinfo/stockinfo.aspx?version=android)"
+					text="证券资讯"></item>
+				<item id="9.5.2" upid="9.5" type="func" img="fund_info.png"
+					msg="Post(http://m.cmbchina.com/newsinfo/fundinfo.aspx?version=android)"
+					text="基金资讯"></item>
+				<item id="9.5.3" upid="9.5" type="func" img="foreign_exchange_info.png"
+					msg="Post(http://m.cmbchina.com/newsinfo/fxinfo.aspx?version=android)"
+					text="外汇资讯"></item>
+				<item id="9.5.4" upid="9.5" type="func" img="gold_info.png"
+					msg="Post(http://m.cmbchina.com/newsinfo/goldinfo.aspx?version=android)"
+					text="黄金资讯"></item>
+			</item>
+			<item id="9.6" upid="9" type="grid" img="special_service.png"
+				msg="goGridMenu(9.6)" text="特色服务">
+				<item id="9.6.1" upid="9.6" type="list" img="alerts_service.png"
+					msg="goListMenu(9.6.1)" text="提醒服务">
+					<item id="9.6.1.1" upid="9.6.1" type="list" img="apple4.png"
+						msg="goListMenu(9.6.1.1)" text="日程提醒">
+						<item id="9.6.1.1.1" upid="9.6.1.1" type="func" img="apple4.png"
+							msg="PostRequest(CommonCtl,GetUIFile,/Toolkit/Notice/NT_AddSchedulePeriod.aspx)"
+							text="添加日程提醒"></item>
+						<item id="9.6.1.1.2" upid="9.6.1.1" type="func" img="apple4.png"
+							msg="PostRequest(CommonCtl,GetUIFile,/Toolkit/Notice/NT_ManageSchedulePeriod.aspx)"
+							text="查询日程提醒"></item>
+						<item id="9.6.1.1.3" upid="9.6.1.1" type="func" img="apple4.png"
+							msg="PostRequest(CommonCtl,GetUIFile,/Toolkit/Notice/NT_ManageSchedulePeriod.aspx)"
+							text="修改日程提醒"></item>
+						<item id="9.6.1.1.4" upid="9.6.1.1" type="func" img="apple4.png"
+							msg="PostRequest(CommonCtl,GetUIFile,/Toolkit/Notice/NT_ManageSchedulePeriod.aspx)"
+							text="删除日程提醒"></item>
+					</item>
+					<item id="9.6.1.2" upid="9.6.1" type="list" img="apple4.png"
+						msg="goListMenu(9.6.1.2)" text="基金净值提醒">
+						<item id="9.6.1.2.1" upid="9.6.1.2" type="func" img="apple4.png"
+							msg="PostRequest(CommonCtl,GetUIFile,/Toolkit/Notice/NT_AddFundNotice.aspx)"
+							text="添加净值提醒"></item>
+						<item id="9.6.1.2.2" upid="9.6.1.2" type="func" img="apple4.png"
+							msg="PostRequest(CommonCtl,GetUIFile,/Toolkit/Notice/NT_ManageFundNotice.aspx)"
+							text="查询净值提醒"></item>
+						<item id="9.6.1.2.3" upid="9.6.1.2" type="func" img="apple4.png"
+							msg="PostRequest(CommonCtl,GetUIFile,/Toolkit/Notice/NT_ManageFundNotice.aspx)"
+							text="删除净值提醒"></item>
+					</item>
+					<item id="9.6.1.3" upid="9.6.1" type="func" img="apple4.png"
+						msg="PostRequest(CommonCtl,GetUIFile,/Toolkit/Notice/NT_NotifyAddressSet.aspx)"
+						text="设置提醒号码"></item>
+				</item>
+				<item id="9.6.2" upid="9.6" type="list" img="mobile_keepaccounts.png"
+					msg="goListMenu(9.6.2)" text="手机记账">
+					<item id="9.6.2.1" upid="9.6.2" type="func" img="apple4.png"
+						msg="PostRequest(CommonCtl,GetUIFile,/Toolkit/MobileAccounting/MA_AddCashAccountRecord.aspx)"
+						text="添加记账记录"></item>
+					<item id="9.6.2.2" upid="9.6.2" type="func" img="apple4.png"
+						msg="PostRequest(CommonCtl,GetUIFile,/Toolkit/MobileAccounting/MA_QueryCashAccountRecord.aspx)"
+						text="查询记账记录"></item>
+					<item id="9.6.2.3" upid="9.6.2" type="func" img="apple4.png"
+						msg="PostRequest(CommonCtl,GetUIFile,/Toolkit/MobileAccounting/MA_QueryCashAccountRecord.aspx)"
+						text="修改记账记录"></item>
+					<item id="9.6.2.4" upid="9.6.2" type="func" img="apple4.png"
+						msg="PostRequest(CommonCtl,GetUIFile,/Toolkit/MobileAccounting/MA_QueryCashAccountRecord.aspx)"
+						text="删除记账记录"></item>
+				</item>
+			</item>
+			<item id="9.7" upid="9" type="grid" img="financing_calc.png"
+				msg="goGridMenu(9.7)" text="理财计算器">
+				<item id="9.7.1" upid="9.7" type="func" img="deposit_calc.png"
+					msg="Post(http://m.cmbchina.com/calculator/savingcal.aspx?version=android)"
+					text="存款计算器"></item>
+				<item id="9.7.2" upid="9.7" type="func" img="loan_calc.png"
+					msg="Post(http://m.cmbchina.com/calculator/loancal.aspx?version=android)"
+					text="贷款计算器"></item>
+				<item id="9.7.3" upid="9.7" type="func" img="nationaldebt_calc.png"
+					msg="Post(http://m.cmbchina.com/calculator/bondcal.aspx?version=android)"
+					text="国债收益计算"></item>
+				<item id="9.7.4" upid="9.7" type="func" img="foreign_exchange_calc.png"
+					msg="Post(http://m.cmbchina.com/calculator/forexcal.aspx?version=android)"
+					text="外汇兑换计算"></item>
+				<item id="9.7.5" upid="9.7" type="func" img="mortgage.png"
+					msg="Post(http://m.cmbchina.com/calculator/averagecal.aspx?version=android)"
+					text="按揭贷款计算"></item>
+			</item>
+			<item id="9.8" upid="9" type="grid" img="today_cmb.png" msg="goGridMenu(9.8)"
+				text="今日招行">
+				<item id="9.8.1" upid="9.8" type="func" img="newbusiness_product.png"
+					msg="Post(http://m.cmbchina.com/personal/productslist.aspx?version=android)"
+					text="最新业务产品"></item>
+				<item id="9.8.2" upid="9.8" type="func" img="cmb_news.png"
+					msg="Post(http://m.cmbchina.com/cmbinfo/cmbnews.aspx?version=android)"
+					text="招行新闻"></item>
+				<item id="9.8.3" upid="9.8" type="func" img="cmb_announcement.png"
+					msg="Post(http://m.cmbchina.com/cmbinfo/cmbannouncement.aspx?version=android)"
+					text="招行公告"></item>
+				<item id="9.8.4" upid="9.8" type="func" img="cmb_stock_price.png"
+					msg="Post(http://m.cmbchina.com/cmbinfo/cmbstockinfo.aspx?version=android)"
+					text="招行股价"></item>
+			</item>
+			<item id="9.10" upid="9" type="func" img="today_analysis1.png"
+				msg="Post(http://m.cmbchina.com/newsinfo/todaycomment.aspx?version=android)"
+				text="财富内参"></item>
+			<item id="9.9" upid="9" type="grid" img="customer_service.png"
+				msg="goGridMenu(9.9)" text="客户服务">
+				<item id="9.9.1" upid="9.9" type="func" img="expenses_standard.png"
+					msg="Post(http://m.cmbchina.com/common/default.aspx?pageid=zfbzamp;version=android)"
+					text="资费标准"></item>
+				<item id="9.9.2" upid="9.9" type="func" img="service_hotline.png"
+					msg="Post(http://m.cmbchina.com/Common/ServiceHotLines.aspx?version=android)"
+					text="服务热线"></item>
+			</item>
+			<item id="9.17" upid="9" type="func" img="chuxingyi0.png"
+				msg="Post(http://m.trip.cmbchina.com?version=androidamp;DeviceType=E)"
+				text="商旅预订"></item>
+			<item id="9.14" upid="9" type="func" img="chongzhi.png"
+				msg="Post(http://m.cmbchina.com/phone/chongzhi.aspx?version=android)"
+				text="手机充值"></item>
+			<item id="9.16" upid="9" type="grid" img="productMarket.png"
+				msg="goGridMenu(9.16)" text="产品超市">
+				<item id="9.16.1" upid="9.16" type="func" img="investProduct2.png"
+					msg="Post(http://m.cmbchina.com/MFinanceWeb/Financing/?version=android)"
+					text="理财产品"></item>
+				<item id="9.16.2" upid="9.16" type="func" img="fundProduct.png"
+					msg="Post(http://m.cmbchina.com/MFinanceWeb/Fund/?version=android)"
+					text="基金产品"></item>
+				<item id="9.16.3" upid="9.16" type="func" img="insurance.png"
+					msg="Post(http://m.cmbchina.com/MFinanceWeb/Insurance/?version=android)"
+					text="保险产品"></item>
+			</item>
+		</item>
+	</item>
+</MenuConfig>

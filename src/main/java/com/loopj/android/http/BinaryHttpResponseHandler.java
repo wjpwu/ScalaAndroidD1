@@ -192,8 +192,10 @@ public class BinaryHttpResponseHandler extends AsyncHttpResponseHandler {
 
         if(status.getStatusCode() >= 300) {
             sendFailureMessage(new HttpResponseException(status.getStatusCode(), status.getReasonPhrase()), responseBody);
-        } else {
+        } else if(responseBody != null) {
             sendSuccessMessage(status.getStatusCode(), responseBody);
+        } else{
+            sendFailureMessage(new HttpResponseException(status.getStatusCode(), status.getReasonPhrase()), responseBody);
         }
     }
 }

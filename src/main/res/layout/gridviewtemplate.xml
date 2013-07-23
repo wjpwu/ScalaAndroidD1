@@ -3,5 +3,6 @@
   xmlns:android="http://schemas.android.com/apk/res/android">
     <include android:id="@+id/view_titlebar_logo" layout="@layout/titlebar_logo" />
     <include android:id="@+id/view_titlebar_func" android:visibility="gone" layout="@layout/titlebar_titlebutton" />
+    <include android:id="@+id/view_titleaction_func" android:visibility="gone" layout="@layout/titlebar_actionbar" />
     <GridView android:id="@+id/gGridView" style="@style/GridViewStyle" />
 </LinearLayout>

@@ -97,4 +97,36 @@ public class Util {
         context.startActivity(Intent.createChooser(intent, activityTitle));
     }
 
+    /**
+     * inputstream to string utf-8编码
+     *
+     * @param is
+     * @return
+     * @throws UnsupportedEncodingException
+     */
+    public static String convertStreamToString(InputStream is)
+            throws UnsupportedEncodingException {
+        BufferedInputStream bis = new BufferedInputStream(is);
+        InputStreamReader inputStreamReader = new InputStreamReader(bis,
+                "utf-8");
+        BufferedReader br = new BufferedReader(inputStreamReader);
+        StringBuilder sb = new StringBuilder();
+        String line = null;
+        try {
+            while ((line = br.readLine()) != null) {
+                sb.append(line);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                is.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        return sb.toString();
+    }
+
+
 }

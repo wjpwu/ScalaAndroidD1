@@ -8,14 +8,14 @@ object General {
     name := "PactDD",
     version := "0.3",
     versionCode := 3,
-    scalaVersion := "2.9.2",
+    scalaVersion := "2.10.1",
     platformName in Android := "android-8",
     javacOptions ++= Seq("-encoding", "UTF-8", "-source", "1.6", "-target", "1.6"),
     githubRepo in Android := "https://github.com/wjpwu/ScalaAndroidD1.git"
   )
 
   val proguardSettings = Seq (
-    useProguard in Android := false,
+    useProguard in Android := true,
     proguardOption in Android :=
       """-dontobfuscate
         |-dontoptimize
@@ -141,7 +141,7 @@ object General {
     AndroidManifestGenerator.settings ++
     AndroidMarketPublish.settings ++ Seq (
       keyalias in Android := "password",
-      libraryDependencies += "org.scalatest" %% "scalatest" % "1.8" % "test"
+      libraryDependencies += "org.scalatest" %% "scalatest" % "1.9" % "test"
     )
 }
 
