@@ -500,7 +500,7 @@ object PTMenu {
 
 
 
-object PTGet{
+object  PTGet{
 
   import scala.concurrent.future
   import scala.concurrent.ExecutionContext.Implicits.global
@@ -509,10 +509,9 @@ object PTGet{
               success: String => Any,
                  fail: String => Any){
   val f : scala.concurrent.Future[String] = future {
-    commonGet(url)
-//    val conn = new URL(HttpUtil.BASE_URL+url).openConnection()
-//    conn.connect()
-//    Util.convertStreamToString(conn.getInputStream)
+    val conn = new URL(HttpUtil.BASE_URL+url).openConnection()
+    conn.connect()
+    Util.convertStreamToString(conn.getInputStream)
   }
     f onFailure {
       case t => fail(t.getMessage)

@@ -36,14 +36,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="690b8d08-86af-49c1-bbba-e56b30b898af" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$USER_HOME$/apps/github/android-library-asynchttp/.classpath" afterPath="$USER_HOME$/apps/github/android-library-asynchttp/.classpath" />
       <change type="MODIFICATION" beforePath="$USER_HOME$/apps/github/android-library-asynchttp/gen/com/xcj/android/net/R.java" afterPath="$USER_HOME$/apps/github/android-library-asynchttp/gen/com/xcj/android/net/R.java" />
       <change type="MODIFICATION" beforePath="$USER_HOME$/apps/github/android-library-asynchttp/project.properties" afterPath="$USER_HOME$/apps/github/android-library-asynchttp/project.properties" />
       <change type="MODIFICATION" beforePath="$USER_HOME$/apps/github/android-library-asynchttp/gen/com/xcj/android/net/BuildConfig.java" afterPath="$USER_HOME$/apps/github/android-library-asynchttp/gen/com/xcj/android/net/BuildConfig.java" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/apps/github/android-library-asynchttp/.classpath" afterPath="$USER_HOME$/apps/github/android-library-asynchttp/.classpath" />
     </list>
     <ignored path="pactdd.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/fragment.java" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1374223987564" ignored="false" />
+    <file path="/fragment.java" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1374637518220" ignored="false" />
     <file path="/Index.scala" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1373525446833" ignored="false" />
     <file path="$PROJECT_DIR$/../../sbttest/.idea/workspace.xml" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1373437508824" ignored="false" />
     <file path="$PROJECT_DIR$/../../sbttest/src/Hello.scala" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1373436794617" ignored="false" />
@@ -53,14 +53,14 @@
     <file path="/SBT" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1373600111579" ignored="false" />
     <file path="/a.xml" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1373508172631" ignored="false" />
     <file path="/Dummy.txt" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1374223790668" ignored="false" />
-    <file path="/PTMenu.scala" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1374224812440" ignored="false" />
-    <file path="/PTNav.scala" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1374223509785" ignored="false" />
+    <file path="/PTMenu.scala" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1374558303526" ignored="false" />
+    <file path="/PTNav.scala" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1374560178472" ignored="false" />
     <file path="/ImageUtil.java" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1373446807864" ignored="false" />
     <file path="/AndroidManifest.xml" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1373515316567" ignored="false" />
     <file path="/CaptureActivity.java" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1373447446865" ignored="false" />
     <file path="/ResultHandler.java" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1373447476255" ignored="false" />
     <file path="/tab_indicator.xml" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1373507532481" ignored="false" />
-    <file path="/Build.scala" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1373593700780" ignored="false" />
+    <file path="/Build.scala" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1374561351687" ignored="false" />
     <file path="/a.dummy" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1373593243065" ignored="false" />
     <file path="/titlebar_actionbar.xml" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1373608818549" ignored="false" />
     <file path="/gridviewtemplate.xml" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1373607306502" ignored="false" />
@@ -78,11 +78,11 @@
     <file path="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/scala/com/honey/TR.scala" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1374139063030" ignored="false" />
     <file path="$PROJECT_DIR$/../../scaloid/honey-sca/src/main/res/drawable/mbutton_selection.xml" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1373945450881" ignored="false" />
     <file path="/mbutton_selection.xml" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1373945413672" ignored="false" />
-    <file path="$PROJECT_DIR$/../../scaloid/honey-sca/target/scala-2.10/src_managed/main/scala/com/honey/sc/TR.scala" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1373953231747" ignored="false" />
-    <file path="$PROJECT_DIR$/../../scaloid/honey-sca/src/main/scala/MainActivity.scala" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1374133102095" ignored="false" />
-    <file path="/MainActivity.scala" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1374133071797" ignored="false" />
-    <file path="$PROJECT_DIR$/../../scaloid/honey-sca/target/scala-2.10/src_managed/main/java/com/honey/sc/R.java" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1373951110899" ignored="false" />
-    <file path="$PROJECT_DIR$/../../scaloid/honey-sca/project/Build.scala" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1373952554564" ignored="false" />
+    <file path="$PROJECT_DIR$/../../scaloid/honey-sca/target/scala-2.10/src_managed/main/scala/com/honey/sc/TR.scala" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1374562969504" ignored="false" />
+    <file path="$PROJECT_DIR$/../../scaloid/honey-sca/src/main/scala/MainActivity.scala" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1374632679341" ignored="false" />
+    <file path="/MainActivity.scala" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1374632638969" ignored="false" />
+    <file path="$PROJECT_DIR$/../../scaloid/honey-sca/target/scala-2.10/src_managed/main/java/com/honey/sc/R.java" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1374562969504" ignored="false" />
+    <file path="$PROJECT_DIR$/../../scaloid/honey-sca/project/Build.scala" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1374562557286" ignored="false" />
     <file path="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/java/com/honey/R.java" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1374132079903" ignored="false" />
     <file path="$PROJECT_DIR$/../../scaloid/honey-sca/src/main/res/layout/main.xml" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1374132416899" ignored="false" />
     <file path="$USER_HOME$/apps/github/Android-Universal-Image-Loader/sample/target/generated-sources/r/com/nostra13/example/universalimageloader/BuildConfig.java" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1374201927510" ignored="false" />
@@ -115,9 +115,42 @@
     <file path="$USER_HOME$/apps/github/Android-Universal-Image-Loader/sample/pom.xml" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1374201926896" ignored="false" />
     <file path="$USER_HOME$/apps/github/Android-Universal-Image-Loader/sample/project.properties" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1374201926896" ignored="false" />
     <file path="$USER_HOME$/apps/github/Android-Universal-Image-Loader/sample/src/com/nostra13/example/universalimageloader/ImageGalleryActivity.java" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1374201926897" ignored="false" />
-    <file path="$PROJECT_DIR$/target/scala-2.10/resource_managed/main/AndroidManifest.xml" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1374223711217" ignored="false" />
+    <file path="$PROJECT_DIR$/target/scala-2.10/resource_managed/main/AndroidManifest.xml" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1374560974098" ignored="false" />
     <file path="/ImageLoader.java" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1374215803471" ignored="false" />
     <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/java/com/honey/R.java" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1374223711217" ignored="false" />
+    <file path="$USER_HOME$/Downloads/douban-android-master/project/Build.scala" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1374559120483" ignored="false" />
+    <file path="$USER_HOME$/Downloads/douban-android-master/target/resolution-cache/reports/com.douban-douban-book_2.10-runtime.xml" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1374559276598" ignored="false" />
+    <file path="$USER_HOME$/Downloads/douban-android-master/target/resolution-cache/reports/com.douban-douban-book_2.10-docs.xml" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1374559276598" ignored="false" />
+    <file path="$USER_HOME$/Downloads/douban-android-master/target/resolution-cache/reports/com.douban-douban-book_2.10-test-internal.xml" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1374559276598" ignored="false" />
+    <file path="$USER_HOME$/Downloads/douban-android-master/target/resolution-cache/com.douban/douban-book_2.10/1.0/resolved.xml.xml" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1374559276598" ignored="false" />
+    <file path="$USER_HOME$/Downloads/douban-android-master/target/scala-2.10/resource_managed/main/AndroidManifest.xml" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1374559276598" ignored="false" />
+    <file path="$USER_HOME$/Downloads/douban-android-master/target/resolution-cache/reports/com.douban-douban-book_2.10-sources.xml" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1374559276598" ignored="false" />
+    <file path="$USER_HOME$/Downloads/douban-android-master/target/resolution-cache/reports/com.douban-douban-book_2.10-plugin.xml" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1374559276598" ignored="false" />
+    <file path="$USER_HOME$/Downloads/douban-android-master/target/resolution-cache/reports/com.douban-douban-book_2.10-compile.xml" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1374559896090" ignored="false" />
+    <file path="$USER_HOME$/Downloads/douban-android-master/target/resolution-cache/reports/ivy-report.xsl" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1374559276599" ignored="false" />
+    <file path="$USER_HOME$/Downloads/douban-android-master/target/resolution-cache/reports/com.douban-douban-book_2.10-pom.xml" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1374559276599" ignored="false" />
+    <file path="$USER_HOME$/Downloads/douban-android-master/target/resolution-cache/reports/com.douban-douban-book_2.10-optional.xml" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1374559276599" ignored="false" />
+    <file path="$USER_HOME$/Downloads/douban-android-master/target/resolution-cache/reports/com.douban-douban-book_2.10-provided.xml" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1374559276599" ignored="false" />
+    <file path="$USER_HOME$/Downloads/douban-android-master/target/resolution-cache/reports/com.douban-douban-book_2.10-runtime-internal.xml" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1374559276599" ignored="false" />
+    <file path="$USER_HOME$/Downloads/douban-android-master/target/resolution-cache/reports/com.douban-douban-book_2.10-compile-internal.xml" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1374559276599" ignored="false" />
+    <file path="$USER_HOME$/Downloads/douban-android-master/target/resolution-cache/reports/com.douban-douban-book_2.10-test.xml" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1374559276599" ignored="false" />
+    <file path="$USER_HOME$/Downloads/douban-android-master/douban-book.iml" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1374559887720" ignored="false" />
+    <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/scala/com/honey/TR.scala" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1374560974098" ignored="false" />
+    <file path="$PROJECT_DIR$/../../scaloid/honey-sca/project/plugins.sbt" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1374561044871" ignored="false" />
+    <file path="$PROJECT_DIR$/../../scaloid/honey-sca/src/main/res/layout/gridviewtemplate.xml" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1374562121833" ignored="false" />
+    <file path="$PROJECT_DIR$/../../scaloid/honey-sca/.idea_modules/Honey-Sca.iml" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1374562786829" ignored="false" />
+    <file path="$PROJECT_DIR$/../../scaloid/honey-sca/.idea/workspace.xml" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1374563437295" ignored="false" />
+    <file path="$PROJECT_DIR$/../../scaloid/honey-sca/.idea/misc.xml" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1374562782660" ignored="false" />
+    <file path="$PROJECT_DIR$/../../scaloid/honey-sca/.idea/modules.xml" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1374562782660" ignored="false" />
+    <file path="$PROJECT_DIR$/../../scaloid/honey-sca/.idea_modules/Honey-Sca-build.iml" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1374628946253" ignored="false" />
+    <file path="$PROJECT_DIR$/../../scaloid/honey-sca/.idea_modules/tests.iml" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1374628966868" ignored="false" />
+    <file path="$PROJECT_DIR$/../../scaloid/honey-sca/src/main/scala/Constant.scala" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1374635012038" ignored="false" />
+    <file path="/Constant.scala" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1374635012038" ignored="false" />
+    <file path="$USER_HOME$/Downloads/goodnews-master/GoodNews/project.properties" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1374637613970" ignored="false" />
+    <file path="$USER_HOME$/Downloads/goodnews-master/ActionBarSherlock/project.properties" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1374637613970" ignored="false" />
+    <file path="$USER_HOME$/Downloads/goodnews-master/GoodNews/src/fixes/android/support/v4/app/NotificationCompatJellyBean.java" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1374637596512" ignored="false" />
+    <file path="/NotificationCompatJellyBean.java" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1374637594090" ignored="false" />
+    <file path="$USER_HOME$/Downloads/goodnews-master/GoodNews/src/com/gettingmobile/goodnews/itemview/ItemViewContentFragment.java" changelist="690b8d08-86af-49c1-bbba-e56b30b898af" time="1374638695628" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,8 +175,6 @@
     <sortChildren value="false" />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -180,6 +211,8 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -189,30 +222,76 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ImageLoader.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/honey/ImageLoader.java">
+      <file leaf-file-name="Build.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project/Build.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="308" column="52" selection-start="9038" selection-end="9038" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#4309#4317#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Util.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/honey/util/Util.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="106" column="25" selection-start="3580" selection-end="3580" vertical-scroll-proportion="0.0">
+            <state line="151" column="33" selection-start="5490" selection-end="5490" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LogUtil.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/honey/util/LogUtil.scala">
+      <file leaf-file-name="PTMenu.scala" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/PTMenu.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="7" selection-start="204" selection-end="204" vertical-scroll-proportion="0.0">
+            <state line="368" column="55" selection-start="12102" selection-end="12102" vertical-scroll-proportion="0.22695035">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="styles.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/res/values/styles.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="270" column="0" selection-start="13532" selection-end="13694" vertical-scroll-proportion="-3.4313726">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="webviewtemplate.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/res/layout/webviewtemplate.xml">
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="19" selection-start="839" selection-end="2980" vertical-scroll-proportion="-6.3461537">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PactDD.iml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea_modules/PactDD.iml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="47" selection-start="1410" selection-end="1410" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Tests.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/src/main/scala/Tests.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="6" selection-start="186" selection-end="186" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PactDD-build.iml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea_modules/PactDD-build.iml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="0" selection-start="2406" selection-end="2567" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -221,50 +300,16 @@
       <file leaf-file-name="PTNav.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/PTNav.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="805" column="15" selection-start="23172" selection-end="23172" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#19#49#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PTMenu.scala" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/PTMenu.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="514" column="19" selection-start="16812" selection-end="16898" vertical-scroll-proportion="0.51950353">
-              <folding>
-                <element signature="e#65#91#0" expanded="true" />
-                <element signature="e#16521#16551#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HttpUtil.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/honey/http/HttpUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="27" selection-start="650" selection-end="650" vertical-scroll-proportion="0.0">
+            <state line="596" column="28" selection-start="16230" selection-end="16230" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AsyncHttpClient.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/loopj/android/http/AsyncHttpClient.java">
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/src/main/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="167" column="85" selection-start="7152" selection-end="7152" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ImageLoaderFactory.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/honey/ImageLoaderFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="30" selection-start="1828" selection-end="1828" vertical-scroll-proportion="0.0">
+            <state line="2" column="38" selection-start="147" selection-end="152" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -288,8 +333,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/target/scala-2.9.2/src_managed/main/scala/com/honey/TR.scala" />
-        <option value="$PROJECT_DIR$/project/plugins.sbt" />
         <option value="$PROJECT_DIR$/src/main/java/com/markupartist/android/widget/ActionBar.java" />
         <option value="$PROJECT_DIR$/src/main/res/layout/actionbar_item.xml" />
         <option value="$PROJECT_DIR$/src/main/res/layout/actionbar.xml" />
@@ -297,20 +340,21 @@
         <option value="$PROJECT_DIR$/src/main/java/com/loopj/android/http/BinaryHttpResponseHandler.java" />
         <option value="$PROJECT_DIR$/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/src/main/scala/Index.scala" />
-        <option value="$PROJECT_DIR$/project/Build.scala" />
         <option value="$PROJECT_DIR$/target/scala-2.10/src_managed/main/scala/com/honey/TR.scala" />
         <option value="$PROJECT_DIR$/src/main/java/com/honey/http/HttpUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/honey/ImageLoader.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/honey/util/Util.java" />
+        <option value="$PROJECT_DIR$/project/Build.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/PTNav.scala" />
+        <option value="$PROJECT_DIR$/.idea_modules/PactDD.iml" />
         <option value="$PROJECT_DIR$/src/main/scala/PTMenu.scala" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/webviewtemplate.xml" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-2" />
-    <option name="y" value="23" />
-    <option name="width" value="1322" />
+    <option name="y" value="22" />
+    <option name="width" value="1319" />
     <option name="height" value="746" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -532,6 +576,80 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pactdd" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pactdd" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pactdd" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pactdd" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="anim" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pactdd" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pactdd" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -567,47 +685,13 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="honey" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pactdd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pactdd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="honey" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="http" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -618,7 +702,7 @@
     <property name="options.lastSelected" value="preferences.pluginManager" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$USER_HOME$/.ivy2/cache/org.scalatest/scalatest_2.10/jars/scalatest_2.10-1.9.jar!/" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/goodnews-master" />
     <property name="AndroidLayoutSelectedEditor" value="text-editor" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
@@ -875,16 +959,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2" y="23" width="1322" height="746" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="22" width="1319" height="746" extended-state="7" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32914376" sideWeight="0.7508197" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299293" sideWeight="0.647541" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2468153" sideWeight="0.49881983" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.0" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961783" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.083606556" sideWeight="0.42800945" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -896,14 +981,13 @@
       <window_info id="SBT Execute" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.352459" sideWeight="0.5003928" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26959246" sideWeight="0.98407644" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26865673" sideWeight="0.98407644" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32887492" sideWeight="0.4852459" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32887492" sideWeight="0.4852459" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32914376" sideWeight="0.7508197" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32894737" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -986,126 +1070,110 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$ANDROID_SDK_ROOT$/platforms/android-8/android.jar!/android/graphics/BitmapFactory.class">
+    <entry file="jar://$ANDROID_SDK_ROOT$/platforms/android-8/android.jar!/org/apache/http/impl/client/DefaultHttpClient.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="159" selection-end="159" vertical-scroll-proportion="0.13297872">
+        <state line="7" column="11" selection-start="256" selection-end="256" vertical-scroll-proportion="0.15957446" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/loopj/android/http/AsyncHttpClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="135" column="35" selection-start="5703" selection-end="5720" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/plugins.sbt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="jar://$ANDROID_SDK_ROOT$/platforms/android-8/android.jar!/android/test/ActivityInstrumentationTestCase2.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="11" selection-start="407" selection-end="407" vertical-scroll-proportion="0.21276596" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/Specs.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="6" selection-start="98" selection-end="98" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/honey/util/Util.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="104" column="19" selection-start="3522" selection-end="3522" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea_modules/PactDD-build.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/src/main/scala/Tests.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="6" selection-start="186" selection-end="186" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="38" selection-start="147" selection-end="152" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea_modules/PactDD.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="47" selection-start="1410" selection-end="1410" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/project/Build.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="128" column="23" selection-start="4711" selection-end="4711" vertical-scroll-proportion="0.025">
+        <state line="151" column="33" selection-start="5490" selection-end="5490" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/loopj/android/http/RequestParams.java">
+    <entry file="file://$PROJECT_DIR$/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="279" column="41" selection-start="9532" selection-end="9532" vertical-scroll-proportion="0.41312057">
+        <state line="28" column="0" selection-start="2406" selection-end="2567" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/honey/util/ViewUtil.java">
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/webviewtemplate.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="13" selection-start="298" selection-end="298" vertical-scroll-proportion="0.05">
+        <state line="22" column="19" selection-start="839" selection-end="2980" vertical-scroll-proportion="-6.3461537">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/honey/http/MediatorData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="13" selection-start="343" selection-end="343" vertical-scroll-proportion="-0.4">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/apps/scala-2.10.2/src/scala-library-src.jar!/scala/concurrent/Future.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="135" column="6" selection-start="4955" selection-end="4955" vertical-scroll-proportion="3.294719">
-          <folding>
-            <element signature="e#552#585#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/apps/scala-2.10.2/src/scala-library-src.jar!/scala/Predef.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="6" selection-start="4043" selection-end="4043" vertical-scroll-proportion="0.3321976">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/honey/ImageLoaderFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="30" selection-start="1828" selection-end="1828" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/honey/ImageLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="308" column="52" selection-start="9038" selection-end="9038" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#4309#4317#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/honey/util/Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="25" selection-start="3580" selection-end="3580" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/honey/util/LogUtil.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="7" selection-start="204" selection-end="204" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/honey/http/HttpUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="27" selection-start="650" selection-end="650" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/loopj/android/http/RetryHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="11" selection-start="2307" selection-end="2307" vertical-scroll-proportion="0.33275563">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/loopj/android/http/AsyncHttpClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="167" column="85" selection-start="7152" selection-end="7152" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/PTNav.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="805" column="15" selection-start="23172" selection-end="23172" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#19#49#0" expanded="true" />
-          </folding>
+        <state line="596" column="28" selection-start="16230" selection-end="16230" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="270" column="0" selection-start="13532" selection-end="13694" vertical-scroll-proportion="-3.4313726">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/PTMenu.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="514" column="19" selection-start="16812" selection-end="16898" vertical-scroll-proportion="0.51950353">
-          <folding>
-            <element signature="e#65#91#0" expanded="true" />
-            <element signature="e#16521#16551#0" expanded="true" />
-          </folding>
+        <state line="368" column="55" selection-start="12102" selection-end="12102" vertical-scroll-proportion="0.22695035">
+          <folding />
         </state>
       </provider>
     </entry>

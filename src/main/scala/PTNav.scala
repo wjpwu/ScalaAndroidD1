@@ -22,6 +22,10 @@ import com.markupartist.android.widget.ActionBar
 import ActionBar.AbstractAction
 import com.markupartist.android.widget.ActionBar
 import scala.ref.WeakReference
+import scala.concurrent._
+import scala.util.Failure
+import scala.util.Success
+import android.preference.PreferenceManager
 
 /**
  * Created with IntelliJ IDEA.
@@ -176,6 +180,7 @@ class PTActivity extends ActivityGroup{
     super.onLowMemory()
     LogUtil.log(this.getClass.getName + "on onLowMemory")
   }
+
 }
 
 class PTLoading extends PTActivity{

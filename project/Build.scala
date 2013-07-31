@@ -4,6 +4,12 @@ import Keys._
 import AndroidKeys._
 
 object General {
+
+  val resolutionRepos = Seq(
+    "typesafe releases" at "http://repo.typesafe.com/typesafe/releases",
+    "typesafe snapshots" at "http://repo.typesafe.com/typesafe/snapshots"
+  )
+
   val settings = Defaults.defaultSettings ++ Seq (
     name := "PactDD",
     version := "0.3",
@@ -11,7 +17,8 @@ object General {
     scalaVersion := "2.10.1",
     platformName in Android := "android-8",
     javacOptions ++= Seq("-encoding", "UTF-8", "-source", "1.6", "-target", "1.6"),
-    githubRepo in Android := "https://github.com/wjpwu/ScalaAndroidD1.git"
+    githubRepo in Android := "https://github.com/wjpwu/ScalaAndroidD1.git",
+    resolvers             ++= resolutionRepos
   )
 
   val proguardSettings = Seq (
@@ -141,7 +148,8 @@ object General {
     AndroidManifestGenerator.settings ++
     AndroidMarketPublish.settings ++ Seq (
       keyalias in Android := "password",
-      libraryDependencies += "org.scalatest" %% "scalatest" % "1.9" % "test"
+      libraryDependencies += "org.scalatest" %% "scalatest" % "1.9" % "test",
+      libraryDependencies += "org.scaloid" %% "scaloid" % "2.1-8"
     )
 }
 

@@ -28,6 +28,7 @@
       <sourceFolder url="file://$MODULE_DIR$/../src/test/scala" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/../target/scala-2.10/src_managed/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../target/scala-2.10/src_managed/main/scala" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/gen" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/../target/resolution-cache" />
       <excludeFolder url="file://$MODULE_DIR$/../target/streams" />
     </content>
@@ -35,6 +36,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="SBT: org.scalatest:scalatest_2.10:1.9:test" level="application" />
     <orderEntry type="library" name="aa" level="project" />
+    <orderEntry type="library" name="Maven: com.google.android:support-v4:r7" level="project" />
     <orderEntry type="library" name="scala-library" level="application" />
   </component>
 </module>
